@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Mono:wght@200;300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+  font-family: markPro;
+  src: url(../fonts/MarkPro.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-white: #ffffff;
+  --bg-main: #e5e5e5;
+  --bg-secondary: #f3f3f3;
+  --primary-color: #136951;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  background-color: #000;
+  color: #ffffff;
+}
+
+#__next {
+  width: 100%;
+}
+
+.app-container {
+  /* max-width: 1200px; */
+  margin: auto;
+  padding: 0 3rem;
+  overflow: hidden;
+}
+
+/* ===================================
+    HERO STYLE STARTS HERE
+====================================== */
+.inux-hero-con {
+  min-height: 100vh;
+  /* background-color: blue; */
+}
+
+.inux-hero-con .logo-con {
+  max-width: 350px;
+}
+
+.inux-hero-con .logo-con img {
+  width: 100%;
+}
+
+.inux-hero-con .routes-flex {
+  gap: 100px !important;
+}
+
+.inux-hero-con .routes-flex a {
+  text-decoration: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 34px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.inux-hero-con .routes-flex a:hover {
+  opacity: 0.7;
+}
+
+.inux-hero-con .content {
+  padding-left: 5rem;
+}
+
+.inux-hero-con .content > div {
+  flex: 1;
+}
+
+.inux-hero-con .text-content {
+  /* max-width: 600px; */
+  padding-right: 2rem;
+}
+
+.inux-hero-con .content .top-text-con {
+  margin-left: 2rem;
+}
+
+.inux-hero-con .content .top-text-con .img-con {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.inux-hero-con .content .top-text-con .img-con img {
+  width: 100%;
+  height: 100%;
+}
+
+.inux-hero-con .content p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.inux-hero-con .content h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 72px;
+  color: #ffffff;
+}
+
+.inux-hero-con .content h2 span {
+  color: var(--primary-color);
+}
+
+.inux-hero-con .content h4 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 27px;
+  color: #ffffff;
+  font-weight: 300 !important;
+}
+
+.inux-hero-con .content .btn-con {
+  position: relative;
+  gap: 50px;
+}
+
+.inux-hero-con .content .btn-con .btn-icon-con {
+  position: absolute;
+  top: -26px;
+  left: -11%;
+  max-width: 250px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.inux-hero-con .content .btn-con .btn-icon-con img {
+  width: 100%;
+}
+
+.inux-hero-con .content .btn-con svg {
+  height: 23px;
+  width: 23px;
+  margin-right: 10px;
+}
+
+.inux-hero-con .content .btn-con button:nth-of-type(1) {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 10px 30px;
+  /* border-radius: 12px; */
+}
+
+.inux-hero-con .content .btn-con button:nth-of-type(2) {
+  background-color: transparent;
+  border-color: #ffffff;
+  padding: 10px 30px;
+  color: #ffffff;
+  /* border-radius: 12px; */
+}
+
+.inux-hero-con .gradient-img-con {
+  max-height: 700px;
+  max-width: 700px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.inux-hero-con .gradient-img-con > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inux-hero-con .gradient-img-con img,
+.inux-hero-con .gradient-img-con .yellow-img-con img {
+  width: 100%;
+  height: 100%;
+}
+
+.inux-hero-con .gradient-img-con .bitcoin-img-con {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-43%, -50%);
+  height: 400px;
+  width: 400px;
+}
+.inux-hero-con .gradient-img-con .yellow-img-con {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 50px;
+}
+
+.inux-hero-con .gradient-img-con .green-bitcoin-img-con {
+  position: absolute;
+  top: 17%;
+  left: 0;
+  width: 80px;
+}
+
+.inux-hero-con .gradient-img-con .sold-img-con {
+  position: absolute;
+  bottom: 25%;
+  right: 0;
+  height: 150px;
+}
+
+.lower-item-icon {
+  position: absolute;
+  bottom: -6%;
+  left: 6%;
+  right: 0;
+  height: 140px;
+}
+
+.lower-item-icon > div {
+  height: 100%;
+}
+
+.counter-con {
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  filter: drop-shadow(43px 4px 4px rgba(0, 0, 0, 0.54));
+  border-radius: 13px;
+}
+
+.counter-con .counter-item-con {
+  gap: 7px;
+}
+
+.counter-con > p {
+  font-family: Roboto Mono !important;
+  font-style: normal !important;
+  font-weight: bold !important;
+  font-size: 13px !important;
+  line-height: 17px !important;
+  color: #ffffff !important;
+}
+
+.counter-border {
+  border: 1px solid #136951;
+}
+
+.counter-con h6 {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 7.48598px;
+  line-height: 10px;
+}
+
+.counter-value {
+  font-family: Roboto Mono !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 28.0724px !important;
+  line-height: 37px !important;
+  color: #ffffff;
+}
+/* ===================================
+    HERO STYLE ENDS HERE
+====================================== */
