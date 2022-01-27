@@ -6,8 +6,11 @@ import { headerRoutes } from '../Utils';
 import HeroImg from './HeroImg';
 
 const Hero = () => {
+  // const [pos, setPos] = useState({ x: 0, y: 0 });
+
   return (
     <div className="inux-hero-con ">
+      {/* <motion.div animate={{ top: pos.y, left: pos.x }} className="mouse-follow" /> */}
       <div className="d-flex justify-content-between align-items-center py-3 app-container">
         <div className="logo-con">
           <img src="./img/logo.png" alt="logo" />
@@ -27,10 +30,9 @@ const Hero = () => {
         className="content d-flex justify-content-between w-100  pt-4"
         // onMouseMove={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         //   setPos({
-        //     x: event.nativeEvent.pageX,
-        //     y: event.nativeEvent.pageY,
+        //     x: event.nativeEvent.pageX - 15,
+        //     y: event.nativeEvent.pageY - 15,
         //   });
-        //   console.log(event);
         // }}
       >
         <div className="mt-5 pt-3 px-5">
