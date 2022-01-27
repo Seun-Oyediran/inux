@@ -4,12 +4,36 @@ import Counter from './Counter';
 
 const HeroImg = () => {
   return (
-    <motion.div>
+    <motion.div
+      animate={{ translateY: '-30px' }}
+      transition={{ repeat: Infinity, duration: 3, repeatType: 'reverse' }}
+    >
       <div className="gradient-img-con">
         <img src="./img/landing_gradient.png" alt="gradient" />
-        <div className="bitcoin-img-con">
+        <motion.div
+          initial={{
+            translateY: '-50%',
+            translateX: '-45%',
+            top: '50%',
+            left: '50%',
+          }}
+          animate={{
+            rotate: 360,
+            translateY: '-50%',
+            translateX: '-45%',
+            top: '50%',
+            left: '50%',
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 15,
+            repeatType: 'loop',
+            ease: 'linear',
+          }}
+          className="bitcoin-img-con"
+        >
           <img src="./img/big_center_bitcoin.png" alt="bitcoin" />
-        </div>
+        </motion.div>
         <div className="yellow-img-con">
           <img src="./img/yellow_img.png" alt="icon" />
         </div>

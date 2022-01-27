@@ -35,7 +35,7 @@ body {
 .app-container {
   /* max-width: 1200px; */
   margin: auto;
-  padding: 0 3rem;
+  padding: 0 5rem;
   overflow: hidden;
   background-color: #000;
 }
@@ -46,7 +46,19 @@ body {
 .inux-hero-con {
   min-height: 100vh;
   background-color: #000;
+  overflow-x: hidden;
   /* background-color: blue; */
+}
+
+.mouse-follow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
 }
 
 .inux-hero-con .logo-con {
@@ -176,8 +188,8 @@ body {
 }
 
 .inux-hero-con .gradient-img-con {
-  max-height: 700px;
-  max-width: 700px;
+  max-height: 650px;
+  max-width: 650px;
   position: relative;
   width: 100%;
   height: 100%;
@@ -266,6 +278,7 @@ body {
   font-weight: 500;
   font-size: 7.48598px;
   line-height: 10px;
+  color: white;
 }
 
 .counter-value {
@@ -278,4 +291,236 @@ body {
 }
 /* ===================================
     HERO STYLE ENDS HERE
+====================================== */
+
+/* ===================================
+    SECOND SECTION STYLE STARTS HERE
+====================================== */
+/* .inux-second-section-container .second, */
+.inux-second-section-container .first,
+.inux-second-section-container .third {
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.inux-second-section-container .third {
+  margin-bottom: 3rem;
+}
+
+.inux-second-section-container .first > div,
+.inux-second-section-container .second > div,
+.inux-second-section-container .third > div {
+  flex: 1;
+}
+
+.inux-second-section-container .first .text-content,
+.inux-second-section-container .third .text-content {
+  max-width: 750px;
+}
+
+.inux-second-section-container .second .text-content {
+  border-left: 1px solid #136951;
+}
+
+.inux-second-section-container .first .text-content h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 45.8905px;
+  line-height: 55px;
+  color: #ffffff;
+}
+
+.inux-second-section-container .first .text-content p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15.4675px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.inux-second-section-container .first .img-con,
+.inux-second-section-container .second .img-con,
+.inux-second-section-container .third .img-con {
+  max-width: 700px;
+}
+
+.inux-second-section-container .first .img-con img,
+.inux-second-section-container .second .img-con img,
+.inux-second-section-container .second .item .icon-con img {
+  width: 100%;
+}
+
+.inux-second-section-container .second .item {
+  gap: 1.2rem;
+}
+
+.inux-second-section-container .second .item .icon-con {
+  width: 80px;
+  height: 80px;
+}
+
+.inux-second-section-container .second .item .item-text {
+  max-width: 400px;
+  gap: 0.4rem;
+}
+
+.inux-second-section-container .second .item .item-text h4 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 35px;
+  color: #ffffff;
+}
+
+.inux-second-section-container .second .item .item-text p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.inux-second-section-container .big-btn-con button {
+  gap: 1rem;
+  border: 2.6px solid #106e54;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+
+  color: #ffffff;
+}
+
+.inux-second-section-container .big-btn-con button:hover {
+  box-shadow: 0px 5px 15px rgba(16, 110, 84, 0.7), 0px 5px 20px rgba(16, 110, 84, 0.5);
+}
+
+.inux-second-section-container .third-header h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 52px;
+  line-height: 61px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.inux-second-section-container .third .text-content p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 37px;
+
+  color: #ffffff;
+}
+
+/* ===================================
+    SECOND SECTION STYLE ENDS HERE
+====================================== */
+
+/* ===================================
+    CRYPTO CARDS STYLE ENDS HERE
+====================================== */
+.crypro-cards-grid-container {
+  margin-bottom: 4rem;
+}
+
+.crypro-cards-grid-container .crypro-cards-grid-con {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  gap: 2rem;
+  justify-content: center;
+  max-width: 900px;
+  /* justify-items: center; */
+}
+
+.crypro-cards-grid-container .crypto-card {
+  position: relative;
+}
+
+.crypro-cards-grid-container .crypto-card > div {
+  position: relative;
+  background-color: #000;
+  z-index: 10;
+  gap: 0.2rem;
+  padding: 32px 0;
+  /* padding: 32px 48px; */
+}
+
+.crypro-cards-grid-container .crypto-card::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(
+    270deg,
+    #4de6b8 0%,
+    #60e9d0 11.98%,
+    #04cdee 54.17%,
+    #2794fc 72.49%,
+    #4b65fd 82.76%,
+    #7a27ff 100%
+  );
+}
+
+.crypro-cards-grid-container .crypto-card .icon-con {
+  width: 30px;
+  height: 30px;
+}
+
+.crypro-cards-grid-container .crypto-card .icon-con img,
+.crypro-cards-grid-container .crypto-card .stock-con img {
+  width: 100%;
+}
+
+.crypro-cards-grid-container .crypto-card .stock-con {
+  width: 80px;
+  margin-bottom: 17px;
+}
+
+.crypro-cards-grid-container .crypto-card h5 {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 19px;
+  color: #ffffff;
+  opacity: 0.7;
+  margin: 5px 0;
+}
+
+.crypro-cards-grid-container .crypto-card p {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.crypro-cards-grid-container .crypto-card h6 {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 21px;
+  color: #ffffff;
+  opacity: 0.56;
+}
+
+/* ===================================
+    CRYPTO CARDS STYLE ENDS HERE
 ====================================== */

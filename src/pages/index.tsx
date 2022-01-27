@@ -1,11 +1,13 @@
 import React from 'react';
 import type { NextPage } from 'next';
-import { Hero } from '../components';
+import { CryptoCards, Hero, SecondSection } from '../components';
 
 const Home: NextPage = () => {
   return (
     <div>
       <Hero />
+      <SecondSection />
+      <CryptoCards />
     </div>
   );
 };
