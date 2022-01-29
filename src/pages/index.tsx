@@ -1,6 +1,8 @@
 import React from 'react';
 import type { NextPage } from 'next';
-import { CryptoCards, Hero, SecondSection } from '../components';
+import {
+  CoreTeamSection, CryptoCards, Hero, SecondSection, TableSection,
+} from '../components';
 
 const Home: NextPage = () => {
   return (
@@ -8,6 +10,8 @@ const Home: NextPage = () => {
       <Hero />
       <SecondSection />
       <CryptoCards />
+      <CoreTeamSection />
+      <TableSection />
     </div>
   );
 };

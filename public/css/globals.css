@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Mono:wght@200;300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 @font-face {
-  font-family: markPro;
+  font-family: Mark Pro;
   src: url(../fonts/MarkPro.ttf);
 }
 
@@ -523,4 +523,179 @@ body {
 
 /* ===================================
     CRYPTO CARDS STYLE ENDS HERE
+====================================== */
+
+/* ===================================
+    CORE TEAM STYLE STARTS HERE
+====================================== */
+.inux-core-team-section .btn-con button {
+  gap: 6px;
+  border: 2.6px solid #106e54;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19.9989px;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+.inux-core-team-section .btn-con button:hover {
+  box-shadow: 0px 5px 15px rgba(16, 110, 84, 0.7), 0px 5px 20px rgba(16, 110, 84, 0.5);
+}
+
+.inux-core-team-section .btn-con button img {
+  max-width: 30px;
+}
+
+.inux-core-team-section .title h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 74px;
+  color: #ffffff;
+  margin: 2rem 0;
+}
+
+.inux-core-team-section .title p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+.inux-core-team-section .core-team-con h3 {
+  font-family: Mark Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 44px;
+  line-height: 59px;
+  color: #ffffff;
+}
+
+.inux-core-team-section .core-team-con .first-grid-con,
+.inux-core-team-section .core-team-con .second-grid-con {
+  max-width: 900px;
+  display: grid;
+  gap: 150px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inux-core-team-section .core-team-con .second-grid-con {
+  max-width: 1200px;
+}
+
+.inux-core-team-section .core-team-con .first-grid-con .item,
+.inux-core-team-section .core-team-con .second-grid-con .item {
+  max-width: 170px;
+}
+
+.inux-core-team-section .core-team-con .first-grid-con .item .img-con img,
+.inux-core-team-section .core-team-con .second-grid-con .item .img-con img {
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+
+.inux-core-team-section .core-team-con .first-grid-con .item p,
+.inux-core-team-section .core-team-con .first-grid-con .item h5,
+.inux-core-team-section .core-team-con .second-grid-con .item p,
+.inux-core-team-section .core-team-con .second-grid-con .item h5 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+}
+
+.inux-core-team-section .core-team-con .first-grid-con .item h5,
+.inux-core-team-section .core-team-con .second-grid-con .item h5 {
+  color: #106e54;
+  margin-top: 0.4rem;
+}
+
+/* ===================================
+    CORE TEAM STYLE ENDS HERE
+====================================== */
+
+/* ===================================
+    MARKET CURRENCY STYLE STARTS HERE
+====================================== */
+.inux-table-section-container .market {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid #136951;
+}
+
+.inux-table-section-container .market h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 29px;
+  line-height: 39px;
+  color: #ffffff;
+}
+
+.inux-table-section-container .market-price {
+  gap: 10px;
+}
+
+.inux-table-section-container .market h5 {
+  background: #136951;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  color: #ffffff;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 9px;
+}
+
+.inux-table-section-container .market h6 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+.inux-table-section-container .input-con {
+  gap: 10px;
+}
+
+.inux-table-section-container .input-con p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+.inux-table-section-container .input-con input {
+  background: rgba(196, 196, 196, 0.16);
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 5px 10px;
+}
+
+/* ===================================
+    MARKET CURRENCY STYLE ENDS HERE
 ====================================== */
