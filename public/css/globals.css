@@ -68,11 +68,22 @@ body {
 /* ===================================
     HERO STYLE STARTS HERE
 ====================================== */
+
 .inux-hero-con {
   min-height: 100vh;
   background-color: #000;
   overflow-x: hidden;
+  overflow-y: hidden;
   /* background-color: blue; */
+}
+
+.inux-hero-con .app-header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  z-index: 20;
 }
 
 .mouse-follow {
@@ -87,7 +98,7 @@ body {
 }
 
 .inux-hero-con .logo-con {
-  max-width: 350px;
+  max-width: 300px;
 }
 
 .inux-hero-con .logo-con img {
@@ -95,7 +106,11 @@ body {
 }
 
 .inux-hero-con .routes-flex {
-  gap: 100px !important;
+  gap: 70px !important;
+}
+
+.inux-hamburger-menu {
+  display: none;
 }
 
 .inux-hero-con .routes-flex a {
@@ -103,8 +118,8 @@ body {
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
-  font-size: 22px;
-  line-height: 34px;
+  font-size: 19px;
+  line-height: 24px;
   color: #ffffff;
   transition: all 0.3s ease;
 }
@@ -115,6 +130,7 @@ body {
 
 .inux-hero-con .content {
   padding-left: 5rem;
+  margin-top: 120px;
 }
 
 .inux-hero-con .content > div {
@@ -1048,4 +1064,180 @@ body {
 
 /* ===================================
     FAQS STYLE ENDS HERE
+====================================== */
+
+/* ===================================
+    FOOTER STYLE STARTS HERE
+====================================== */
+.inux-footer-container {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+.inux-footer-container .title h3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 50px;
+  color: #ffffff;
+}
+
+.inux-footer-container .contact-info-item {
+  gap: 15px;
+}
+
+.inux-footer-container .contact-info-item img {
+  max-width: 30px;
+}
+
+.inux-footer-container a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.inux-footer-container a:hover {
+  color: var(--primary-color);
+}
+
+.inux-footer-container .contact-info-item p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 22px;
+  /* color: #ffffff; */
+  text-decoration: none;
+}
+
+.inux-contact-us-form-input {
+  width: 100%;
+}
+
+.inux-contact-us-form-input input,
+.inux-contact-us-form-input textarea {
+  display: block;
+  background: rgba(255, 255, 255, 0.22);
+  height: 50px;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.inux-contact-us-form-input textarea {
+  resize: none;
+  height: 150px;
+  padding: 15px 10px;
+}
+
+.inux-contact-us-form-input input::placeholder,
+.inux-contact-us-form-input textarea::placeholder {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 33px;
+  color: rgba(255, 255, 255, 0.22);
+  opacity: 0.8;
+}
+
+.inux-footer-container .contact-us-form {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inux-footer-container .contact-us-form .name-email {
+  gap: 30px;
+}
+
+.inux-footer-container .contact-us-form button {
+  color: #ffffff;
+  border-color: var(--primary-color);
+}
+
+.inux-footer-container .contact-us-form button:hover {
+  box-shadow: 0px 5px 15px rgba(16, 110, 84, 0.7), 0px 5px 20px rgba(16, 110, 84, 0.5);
+}
+
+.inux-footer-container .quick-links-con {
+  margin-top: 6rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+.inux-footer-container .quick-links-con > div {
+  max-width: 230px;
+}
+
+.inux-footer-container .quick-links-con .logo-con img {
+  width: 100%;
+}
+
+.inux-footer-container .quick-links-con .logo-con p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 27px;
+  color: #ffffff;
+  opacity: 0.7;
+  margin-top: 1rem;
+}
+
+.inux-footer-container .quick-links-con ul {
+  list-style: none;
+}
+
+.inux-footer-container .quick-links-con ul li {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  margin: 0.5rem 0;
+}
+
+.inux-footer-container .quick-links-con h3 {
+  margin-bottom: 2rem;
+}
+
+.inux-footer-container .footer-bottom-content hr {
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+}
+
+.inux-footer-container .copyrights-con .first h4 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+  color: #ffffff;
+}
+
+.inux-footer-container .copyrights-con .terms-and-conditions {
+  gap: 3rem;
+}
+
+.inux-footer-container .socila-links-con {
+  margin-top: 5rem;
+}
+
+.inux-footer-container .socila-links-con > div {
+  gap: 1rem;
+}
+
+.inux-footer-container .socila-links-con img {
+  max-width: 25px;
+}
+/* ===================================
+    FOOTER STYLE ENDS HERE
 ====================================== */

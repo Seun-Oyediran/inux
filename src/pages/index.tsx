@@ -4,6 +4,7 @@ import {
   CoreTeamSection,
   CryptoCards,
   FAQs,
+  Footer,
   Hero,
   RoadMap,
   SecondSection,
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
       <TableSection />
       <RoadMap />
       <FAQs />
+      <Footer />
     </div>
   );
 };

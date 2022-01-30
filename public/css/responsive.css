@@ -6,13 +6,76 @@
 
 /* col-xl */
 @media (max-width: 1199.98px) {
+  .app-container {
+    padding: 0 3rem;
+  }
+  .inux-hero-con .routes-flex {
+    gap: 50px !important;
+  }
+  .inux-hero-con .logo-con {
+    max-width: 250px;
+  }
+  .inux-hero-con .content {
+    padding-left: 3rem;
+  }
+  .inux-hero-con .gradient-img-con {
+    max-height: 500px;
+    max-width: 500px;
+  }
+  .inux-hero-con .gradient-img-con .bitcoin-img-con {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-43%, -50%);
+    height: 300px;
+    width: 300px;
+  }
 }
 
 /* col-lg */
 @media (max-width: 991.98px) {
+  .app-container {
+    padding: 0 2rem;
+  }
+  .inux-hero-con .routes-flex {
+    gap: 40px !important;
+  }
+  .inux-hero-con .logo-con {
+    max-width: 200px;
+  }
+  .inux-hero-con .content {
+    padding-left: 2rem;
+    margin-top: 110px;
+  }
+  .inux-second-section-container .first .text-content h3 {
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 45px;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
 }
 
-@media (max-width: 867.98px) {
+@media (max-width: 880.98px) {
+  .inux-hero-con .routes-flex {
+    display: none !important;
+  }
+  .inux-hamburger-menu {
+    display: inline-block;
+  }
+  .inux-hamburger-menu img {
+    max-width: 20px;
+  }
+  .inux-hero-con .content {
+    padding-left: 2rem;
+    margin-top: 70px;
+  }
+  .inux-second-section-container .first .text-content h3 {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 42px;
+  }
 }
 
 @media (min-width: 767.98px) {
@@ -20,6 +83,68 @@
 
 /* col-md */
 @media (max-width: 767.98px) {
+  .inux-second-section-container .second .text-content {
+    border: none;
+  }
+
+  .inux-hero-con {
+    min-height: unset;
+    /* background-color: blue; */
+  }
+  .inux-second-section-container .first .text-content h3 {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .inux-second-section-container .first,
+  .inux-second-section-container .third {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 500.98px) {
+  .app-container {
+    padding: 0 1rem;
+  }
+  .inux-hero-con .logo-con {
+    max-width: 150px;
+  }
+  .inux-hero-con .content {
+    padding-left: 1rem;
+    margin-top: 50px;
+  }
+  .inux-hero-con .content h2 {
+    font-size: 40px;
+    line-height: 62px;
+  }
+  .inux-hero-con .gradient-img-con {
+    max-height: 400px;
+    max-width: 400px;
+    width: 100%;
+  }
+  .inux-hero-con .gradient-img-con .bitcoin-img-con {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-43%, -50%);
+    height: 300px;
+    width: 300px;
+  }
+  .inux-hero-con .gradient-img-con .yellow-img-con,
+  .inux-hero-con .gradient-img-con .green-bitcoin-img-con,
+  .inux-hero-con .gradient-img-con .sold-img-con,
+  .inux-hero-con .gradient-img-con .lower-icon-con {
+    display: none;
+  }
+  .inux-second-section-container .first .text-content h3 {
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 36px;
+  }
+  .inux-second-section-container .first .text-content p {
+    font-size: 13px;
+    line-height: 22px;
+  }
 }
 
 @media (max-width: 299.98px) {

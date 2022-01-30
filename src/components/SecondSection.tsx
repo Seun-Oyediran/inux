@@ -27,7 +27,7 @@ const SecondSection = () => {
   return (
     <div className="app-container">
       <div className="inux-second-section-container ">
-        <div className="first d-flex justify-content-between py-5 ">
+        <div className="first d-md-flex justify-content-between py-3 py-md-5  ">
           <div className="text-content d-flex justify-content-center align-items-center flex-column">
             <h3>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
             <p>
@@ -41,7 +41,7 @@ const SecondSection = () => {
               Collicitudin sit amet lacus ut feugiat. Curabitur a sagittis neque.
             </p>
           </div>
-          <div className="d-flex justify-content-center">
+          <div className="d-flex justify-content-center mt-3 mt-md-0">
             <div className="img-con">
               <Lottie options={cryptOptions} />
               {/* <img src="./img/second_section_1.png" alt="second" /> */}
@@ -49,8 +49,8 @@ const SecondSection = () => {
           </div>
         </div>
 
-        <div className="second d-flex justify-content-between my-5 py-5">
-          <div className="d-flex justify-content-center">
+        <div className="second d-md-flex justify-content-between my-0 my-md-5 py-md-5">
+          <div className="d-none d-md-flex justify-content-center">
             <div className="img-con">
               <Lottie options={miningOptions} />
               {/* <img src="./img/second_section_2.png" alt="second" /> */}
@@ -94,6 +94,13 @@ const SecondSection = () => {
                   consectetur adipiscing elit. Ut in justo iaculis, molestie lectus id, posuere
                   tortor
                 </p>
+              </div>
+            </div>
+
+            <div className="d-flex d-md-none justify-content-center  mt-3 mt-md-0">
+              <div className="img-con">
+                <Lottie options={miningOptions} />
+                {/* <img src="./img/second_section_2.png" alt="second" /> */}
               </div>
             </div>
           </div>

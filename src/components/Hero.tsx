@@ -11,11 +11,14 @@ const Hero = () => {
   return (
     <div className="inux-hero-con ">
       {/* <motion.div animate={{ top: pos.y, left: pos.x }} className="mouse-follow" /> */}
-      <div className="d-flex justify-content-between align-items-center py-3 app-container">
+      <div className="d-flex justify-content-between align-items-center py-3 app-container app-header-fixed">
         <div className="logo-con">
           <img src="./img/logo.png" alt="logo" />
         </div>
         <div>
+          <button type="button" className="btn inux-hamburger-menu">
+            <img src="./img/hamburger.png" alt="menu" />
+          </button>
           <div className="d-flex routes-flex">
             {headerRoutes.map((item, index) => (
               <Button variant="link" key={index} href={item.route}>
@@ -27,7 +30,7 @@ const Hero = () => {
       </div>
 
       <div
-        className="content d-flex justify-content-between w-100  pt-4"
+        className="content d-md-flex justify-content-between w-100   pt-4"
         // onMouseMove={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         //   setPos({
         //     x: event.nativeEvent.pageX - 15,
@@ -35,7 +38,7 @@ const Hero = () => {
         //   });
         // }}
       >
-        <div className="mt-5 pt-3 px-5">
+        <div className="mt-5 pt-3 px-0 px-lg-5">
           <div className="text-content">
             <div className="my-4 d-flex align-items-center top-text-con ">
               <div className="img-con d-flex align-items-center">
@@ -55,7 +58,7 @@ const Hero = () => {
                 Transaction
               </h2>
 
-              <h4>
+              <h4 className="d-none d-md-block">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in justo iaculis,
                 molestie lectus id, posuere tortor. Pellentesque nisi nisl, auctor
               </h4>
@@ -67,7 +70,7 @@ const Hero = () => {
                 <motion.button
                   whileHover={{ translateY: '-5px' }}
                   type="button"
-                  className="d-flex align-items-center btn btn-primary"
+                  className="d-none d-lg-flex align-items-center btn btn-primary"
                 >
                   <Play />
                   How it works
@@ -86,7 +89,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="hero-img d-flex justify-content-end">
+        <div className="hero-img d-none d-md-flex justify-content-center justify-content-md-end mt-5 mt-md-0 pt-5 pt-md-0">
           <HeroImg />
         </div>
       </div>
