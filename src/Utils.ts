@@ -63,3 +63,10 @@ export const quarterItemArray = [
   { title: 'Q3', color: '#CCDF23 ', img: './img/yellow_arrow.png' },
   { title: 'Q4', color: '#21EDBA', img: './img/green_arrow.png' },
 ];
+
+export const socialMediaLinksArray = [
+  { name: 'facebok', url: '/', img: './img/social_facebook.png' },
+  { name: 'twitter', url: '/', img: './img/social_twitter.png' },
+  { name: 'instagram', url: '/', img: './img/social_instagram.png' },
+  { name: 'linkedin', url: '/', img: './img/social_linkedin.png' },
+];

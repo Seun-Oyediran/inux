@@ -43,10 +43,10 @@ const HeroImg = () => {
         <div className="sold-img-con">
           <img src="./img/sold.png" alt="icon" />
         </div>
-        <div className="lower-item-icon">
+        <div className="lower-item-icon ">
           <div className="d-flex justify-content-between">
             <Counter />
-            <div className="lower-icon-con">
+            <div className="lower-icon-con d-none d-lg-block">
               <img src="./img/lower_icon.png" alt="icon" />
             </div>
           </div>
