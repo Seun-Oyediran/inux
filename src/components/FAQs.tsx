@@ -35,11 +35,11 @@ const FAQItem = (props: IFAQItem) => {
               open: { opacity: 1, height: 'auto' },
               collapsed: { opacity: 0, height: 0 },
             }}
-            transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
+            transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
             <motion.p
               variants={{ collapsed: { scale: 0.8 }, open: { scale: 1 } }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.5 }}
               className="py-3"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi Lorem ipsum dolor sit
