@@ -40,6 +40,31 @@ body {
   background-color: #000;
 }
 
+.scrollbar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  /* background-color: #f5f5f5; */
+  background-color: #222;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 4px;
+  /* background-color: #f5f5f5; */
+  background-color: #000;
+}
+
+.scrollbar.horizontal::-webkit-scrollbar {
+  height: 7px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(171, 167, 217, 0.5);
+}
+
 /* ===================================
     HERO STYLE STARTS HERE
 ====================================== */
@@ -571,7 +596,7 @@ body {
 }
 
 .inux-core-team-section .core-team-con h3 {
-  font-family: Mark Pro;
+  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 44px;
@@ -696,6 +721,331 @@ body {
   padding: 5px 10px;
 }
 
+.inux-table-section-container .inux-table {
+  background: linear-gradient(79.3deg, #000000 0.07%, rgba(0, 0, 0, 0) 89.25%),
+    linear-gradient(
+      222.71deg,
+      #136951 -2.26%,
+      rgba(19, 105, 81, 0.71) 33.11%,
+      rgba(19, 105, 81, 0.46) 62.8%
+    );
+  border-radius: 19px;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table > :not(caption) > * > * {
+  border-bottom: none !important;
+}
+
+.inux-table-section-container .inux-table tr {
+  border-bottom: 1px solid black;
+}
+
+.inux-table-section-container .inux-table td,
+.inux-table-section-container .inux-table th {
+  border-left: 1px solid black;
+  padding: 8px 15px;
+}
+
+.inux-table-section-container .inux-table th button {
+  gap: 40px;
+}
+
+.inux-table-section-container .inux-table th button,
+.inux-table-section-container .inux-table td p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+  padding: 0;
+}
+
+.inux-table-section-container .inux-table td .first {
+  min-width: 200px;
+  gap: 9px;
+}
+
+.inux-table-section-container .inux-table td .chart {
+  gap: 9px;
+}
+
+.inux-table-section-container .inux-table td .first img {
+  width: 30px;
+}
+
+.inux-table-section-container .inux-table td .chart img {
+  width: 15px;
+}
+
+.quarter-review-container .grid-con {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 2rem;
+}
+
+.quarter-review-container .quarter-item {
+  max-width: 250px;
+}
+
+.quarter-review-container .quarter-item:nth-of-type(2),
+.quarter-review-container .quarter-item:nth-of-type(4) {
+  transform: translateY(20px);
+}
+
+.quarter-review-container .quarter-item img {
+  width: 100%;
+}
+
+.quarter-review-container .quarter-item h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23.1875px;
+  line-height: 27px;
+}
+
+.quarter-review-container .quarter-item h6 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.quarter-review-container .quarter-item p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.table-bottom-divider {
+  border: 1px solid rgba(255, 255, 255, 0.53);
+  max-width: 1300px;
+  margin: 5rem auto;
+}
+
 /* ===================================
     MARKET CURRENCY STYLE ENDS HERE
+====================================== */
+
+/* ===================================
+    ROAD MAP STYLE STARTS HERE
+====================================== */
+.inux-roadmap-container .title button {
+  color: #ffffff;
+  gap: 10px;
+  border: 1.8016px solid #136951;
+  border-radius: 8px;
+}
+
+.inux-roadmap-container .title button:hover {
+  box-shadow: 0px 5px 15px rgba(16, 110, 84, 0.7), 0px 5px 20px rgba(16, 110, 84, 0.5);
+}
+
+.inux-roadmap-container .content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15rem !important;
+}
+
+.inux-roadmap-container .title .text {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.inux-roadmap-container .title .text h2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 58px;
+  color: #ffffff;
+}
+
+.inux-roadmap-container .title .text p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.inux-roadmap-container .content {
+  position: relative;
+  margin-top: 8rem !important;
+  margin-bottom: 20rem !important;
+}
+
+.inux-roadmap-container .absolute-content.first {
+  position: absolute;
+  top: 0;
+  left: 15.5%;
+  bottom: 0;
+  right: 0;
+  transform: translateY(-8px);
+}
+
+.inux-roadmap-container .absolute-content.second {
+  position: absolute;
+  top: 50%;
+  left: 15.5%;
+  bottom: 0;
+  right: 0;
+  transform: translateY(-10px);
+}
+
+.inux-roadmap-container .absolute-content.third {
+  position: absolute;
+  top: 100%;
+  left: 15.5%;
+  bottom: 0;
+  right: 0;
+  transform: translateY(-15px);
+}
+
+.inux-roadmap-container .absolut-content-item .img-con {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inux-roadmap-container .absolut-content-item .img-con img {
+  width: 100%;
+  display: block;
+}
+
+.inux-roadmap-container .absolut-content-item h3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.inux-roadmap-container .absolut-content-item .dark-box {
+  background: rgba(196, 196, 196, 0.12);
+  border-radius: 19.2246px;
+}
+
+.inux-roadmap-container .absolut-content-item .dark-box h4 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+.inux-roadmap-container .absolut-content-item .dark-box p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+}
+
+/* ===================================
+    ROAD MAP STYLE ENDS HERE
+====================================== */
+
+/* ===================================
+    FAQS STYLE STARTS HERE
+====================================== */
+.inux-faqs-container .title h2 {
+  font-family: Arvo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 65px;
+
+  color: #136951;
+}
+
+.inux-faqs-container .title h2 strong {
+  color: #ffffff;
+}
+
+.inux-faqs-container .title p {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 25px;
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+.inux-faqs-container .faq-flex {
+  gap: 2rem;
+  margin: 5rem 0;
+  margin-top: 8rem;
+}
+
+.inux-faqs-container .accordion-con {
+  max-width: 600px;
+  width: 100%;
+  flex: 1;
+}
+
+.inux-faqs-container .accordion-con .item {
+  width: 100%;
+  border-top: 0.5px solid #ffffff;
+  border-bottom: 0.5px solid #ffffff;
+}
+
+.inux-faqs-container .accordion-con .item button:focus {
+  box-shadow: none !important;
+}
+
+.inux-faqs-container .accordion-con .item h3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 47px;
+  color: #ffffff;
+}
+
+.inux-faqs-container .accordion-con .item p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+.inux-faqs-container .faq-flex .img-con {
+  max-width: 600px;
+  flex: 1;
+}
+
+.inux-faqs-container .faq-flex .img-con img {
+  width: 100%;
+}
+
+/* ===================================
+    FAQS STYLE ENDS HERE
 ====================================== */
