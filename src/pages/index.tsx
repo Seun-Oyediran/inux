@@ -1,7 +1,13 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import {
-  CoreTeamSection, CryptoCards, Hero, SecondSection, TableSection,
+  CoreTeamSection,
+  CryptoCards,
+  FAQs,
+  Hero,
+  RoadMap,
+  SecondSection,
+  TableSection,
 } from '../components';
 
 const Home: NextPage = () => {
@@ -12,6 +18,8 @@ const Home: NextPage = () => {
       <CryptoCards />
       <CoreTeamSection />
       <TableSection />
+      <RoadMap />
+      <FAQs />
     </div>
   );
 };

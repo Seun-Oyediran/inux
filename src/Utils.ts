@@ -56,3 +56,10 @@ export const getTimeDiff = (endDate: number, startDate: number) => {
     ended: false,
   };
 };
+
+export const quarterItemArray = [
+  { title: 'Q1', color: '#E82768', img: './img/red_arrow.png' },
+  { title: 'Q2', color: '#33CCFF', img: './img/blue_arrow.png' },
+  { title: 'Q3', color: '#CCDF23 ', img: './img/yellow_arrow.png' },
+  { title: 'Q4', color: '#21EDBA', img: './img/green_arrow.png' },
+];
