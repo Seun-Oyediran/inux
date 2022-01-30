@@ -110,7 +110,7 @@ body {
 }
 
 .inux-hamburger-menu {
-  display: none;
+  display: none !important;
 }
 
 .inux-hero-con .routes-flex a {

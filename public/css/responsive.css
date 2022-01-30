@@ -62,7 +62,7 @@
     display: none !important;
   }
   .inux-hamburger-menu {
-    display: inline-block;
+    display: inline-block !important;
   }
   .inux-hamburger-menu img {
     max-width: 20px;
