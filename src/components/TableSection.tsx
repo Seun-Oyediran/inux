@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
 import { quarterItemArray } from '../Utils';
 
 interface IQuarterItem {
@@ -10,8 +11,18 @@ interface IQuarterItem {
 const QuarterItem = (props: IQuarterItem) => {
   const { title, color, img } = props;
 
+  useEffect(() => {
+    AOS.init({
+      offset: 150,
+      duration: 500,
+      easing: 'ease-in-sine',
+      delay: 50,
+    });
+    // AOS.refresh();
+  }, []);
+
   return (
-    <div className="quarter-item">
+    <div className="quarter-item" data-aos="fade-up">
       <div className="title mb-5 pb-3">
         <div className="img-con">
           <img src={img} alt="red arrow" />
