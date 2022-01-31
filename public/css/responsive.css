@@ -181,6 +181,11 @@
     margin-bottom: 1rem;
     font-size: 19px;
   }
+  .inux-footer-container .copyrights-con .first h4 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 
 @media (max-width: 500.98px) {

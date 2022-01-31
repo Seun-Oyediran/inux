@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Lottie from 'react-lottie';
+import AOS from 'aos';
 import { BigButtonIcon } from '../svgs';
 import miningData from '../lottie/mining.json';
 import cryptoData from '../lottie/crypto.json';
@@ -24,12 +25,25 @@ const bitcoinOptions = {
 };
 
 const SecondSection = () => {
+  useEffect(() => {
+    AOS.init({
+      offset: 150,
+      duration: 500,
+      easing: 'ease-in-sine',
+      delay: 50,
+    });
+    // AOS.refresh();
+  }, []);
+
   return (
     <div className="app-container">
       <div className="inux-second-section-container ">
         <div className="first d-md-flex justify-content-between py-3 py-md-5  ">
-          <div className="text-content d-flex justify-content-center align-items-center flex-column">
-            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
+          <div
+            className="text-content d-flex justify-content-center align-items-center flex-column "
+            data-aos="fade-right"
+          >
+            <h3 className="my-2">Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucibus nunc eget
               est ornare faucibus. Sed tristique mi in urna vulputate, id viverra nunc ullamcorper.
@@ -39,7 +53,7 @@ const SecondSection = () => {
             </p>
           </div>
           <div className="d-flex justify-content-center mt-3 mt-md-0">
-            <div className="img-con">
+            <div className="img-con" data-aos="fade-up">
               <Lottie options={cryptOptions} />
               {/* <img src="./img/second_section_1.png" alt="second" /> */}
             </div>
@@ -48,14 +62,14 @@ const SecondSection = () => {
 
         <div className="second d-md-flex justify-content-between my-0 my-md-5 py-md-5">
           <div className="d-none d-md-flex justify-content-center">
-            <div className="img-con">
+            <div className="img-con" data-aos="fade-right">
               <Lottie options={miningOptions} />
               {/* <img src="./img/second_section_2.png" alt="second" /> */}
             </div>
           </div>
 
           <div className="text-content d-flex justify-content-center align-items-center flex-column ">
-            <div className="d-flex item my-4">
+            <div className="d-flex item my-4 " data-aos="zoom-in">
               <div className="icon-con">
                 <img src="./img/second_section_icon_1.png" alt="icon1" />
               </div>
@@ -68,7 +82,7 @@ const SecondSection = () => {
               </div>
             </div>
 
-            <div className="d-flex item my-4">
+            <div className="d-flex item my-4" data-aos="zoom-in">
               <div className="icon-con">
                 <img src="./img/second_section_icon_2.png" alt="icon1" />
               </div>
@@ -81,7 +95,7 @@ const SecondSection = () => {
               </div>
             </div>
 
-            <div className="d-flex item my-4">
+            <div className="d-flex item my-4" data-aos="zoom-in">
               <div className="icon-con">
                 <img src="./img/second_section_icon_3.png" alt="icon1" />
               </div>
@@ -95,7 +109,7 @@ const SecondSection = () => {
             </div>
 
             <div className="d-flex d-md-none justify-content-center  mt-3 mt-md-0">
-              <div className="img-con">
+              <div className="img-con" data-aos="fade-right">
                 <Lottie options={miningOptions} />
                 {/* <img src="./img/second_section_2.png" alt="second" /> */}
               </div>
@@ -118,7 +132,10 @@ const SecondSection = () => {
             <h3>Lorem ipsum dolor</h3>
           </div>
           <div className="third d-md-flex justify-content-between">
-            <div className="text-content d-flex justify-content-center align-items-center flex-column">
+            <div
+              className="text-content d-flex justify-content-center align-items-center flex-column"
+              data-aos="fade-right"
+            >
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucibus nunc eget
                 est ornare faucibus. Sed tristique mi in urna vulputate, id viverra nunc
@@ -128,7 +145,7 @@ const SecondSection = () => {
               </p>
             </div>
             <div className="d-flex justify-content-center">
-              <div className="img-con">
+              <div className="img-con" data-aos="fade-left">
                 <Lottie options={bitcoinOptions} />
                 {/* <img src="./img/second_section_1.png" alt="second" /> */}
               </div>

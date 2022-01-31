@@ -1,5 +1,6 @@
+import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import React, { useState } from 'react';
+import AOS from 'aos';
 
 interface IFAQItem {
   initial: boolean;
@@ -54,6 +55,16 @@ const FAQItem = (props: IFAQItem) => {
 };
 
 const FAQs = () => {
+  useEffect(() => {
+    AOS.init({
+      offset: 150,
+      duration: 500,
+      easing: 'ease-in-sine',
+      delay: 50,
+    });
+    // AOS.refresh();
+  }, []);
+
   return (
     <div className="app-container">
       <div className="inux-faqs-container">
@@ -70,10 +81,10 @@ const FAQs = () => {
         </div>
 
         <div className="faq-flex d-md-flex justify-content-between align-items-center">
-          <div className="mt-4 mt-md-0 img-con d-md-none">
+          <div className="mt-4 mt-md-0 img-con d-md-none" data-aos="zoom-out">
             <img src="./img/faq.png" alt="faq" />
           </div>
-          <div className="accordion-con">
+          <div className="accordion-con" data-aos="zoom-in">
             <FAQItem initial />
             <FAQItem initial={false} />
             <FAQItem initial={false} />

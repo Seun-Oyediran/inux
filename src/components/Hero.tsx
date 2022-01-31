@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Play } from '../svgs';
 import { headerRoutes } from '../Utils';
 import HeroImg from './HeroImg';
+import Counter from './Counter';
 
 const Hero = () => {
   // const [pos, setPos] = useState({ x: 0, y: 0 });
@@ -136,6 +137,9 @@ const Hero = () => {
 
         <div className="hero-img d-none d-md-flex justify-content-center justify-content-md-end mt-5 mt-md-0 pt-5 pt-md-0">
           <HeroImg />
+        </div>
+        <div className="d-flex d-md-none justify-content-center my-4">
+          <Counter />
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
 
 interface ICryptoCard {
   img: string;
@@ -8,8 +9,18 @@ const iconsArray = ['./img/card_logo_1.png', './img/card_logo_2.png', './img/car
 
 const CryptoCard = (props: ICryptoCard) => {
   const { img } = props;
+  useEffect(() => {
+    AOS.init({
+      offset: 150,
+      duration: 500,
+      easing: 'ease-in-sine',
+      delay: 50,
+    });
+    // AOS.refresh();
+  }, []);
+
   return (
-    <div className="crypto-card ">
+    <div className="crypto-card" data-aos="flip-left">
       <div className="child d-flex  justify-content-center ">
         <div>
           <div className="icon-con">
