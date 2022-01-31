@@ -36,9 +36,6 @@ const SecondSection = () => {
               Nam sit amet sodales augue. P hasellus sodales dignissim lectus eget condimentum.
               Mauris sollicitudin sit amet lacus ut feugiat. Curabitur a sagittis neque.Lorem ipsum
               dolor sit amet, consectetur adipiscing elit. Vivamus faucibus nunc eget est ornare
-              faucibus. Sed tristique mi in urna vulputate, id viverra nunc ullamcorper. Nam sit
-              amet sodales augue. Phasellus sodales dignissim lectus eget condimentum. Mauris
-              Collicitudin sit amet lacus ut feugiat. Curabitur a sagittis neque.
             </p>
           </div>
           <div className="d-flex justify-content-center mt-3 mt-md-0">
@@ -116,11 +113,11 @@ const SecondSection = () => {
           </button>
         </div>
 
-        <div className="my-5 py-5">
+        <div className="my-3 my-md-5 py-md-5">
           <div className="third-header">
             <h3>Lorem ipsum dolor</h3>
           </div>
-          <div className="third d-flex justify-content-between">
+          <div className="third d-md-flex justify-content-between">
             <div className="text-content d-flex justify-content-center align-items-center flex-column">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucibus nunc eget
@@ -128,10 +125,6 @@ const SecondSection = () => {
                 ullamcorper. Nam sit amet sodales augue. P hasellus sodales dignissim lectus eget
                 condimentum. Mauris sollicitudin sit amet lacus ut feugiat. Curabitur a sagittis
                 neque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucibus nunc
-                eget est ornare faucibus. Sed tristique mi in urna vulputate, id viverra nunc
-                ullamcorper. Nam sit amet sodales augue. Phasellus sodales dignissim lectus eget
-                condimentum. Mauris Collicitudin sit amet lacus ut feugiat. Curabitur a sagittis
-                neque.
               </p>
             </div>
             <div className="d-flex justify-content-center">

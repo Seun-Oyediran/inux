@@ -69,14 +69,17 @@ const FAQs = () => {
           </p>
         </div>
 
-        <div className="faq-flex d-flex justify-content-between align-items-center">
+        <div className="faq-flex d-md-flex justify-content-between align-items-center">
+          <div className="mt-4 mt-md-0 img-con d-md-none">
+            <img src="./img/faq.png" alt="faq" />
+          </div>
           <div className="accordion-con">
             <FAQItem initial />
             <FAQItem initial={false} />
             <FAQItem initial={false} />
             <FAQItem initial={false} />
           </div>
-          <div className="img-con">
+          <div className="mt-4 mt-md-0 img-con d-none d-md-block">
             <img src="./img/faq.png" alt="faq" />
           </div>
         </div>

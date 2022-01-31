@@ -38,7 +38,7 @@ const RoadMap = () => {
           </div>
         </div>
 
-        <div className="content large-screens">
+        <div className="d-none d-md-block content large-screens">
           <div className="img-con large-img">
             <img src="./img/roadmap_img.png" alt="roadmap" className="w-100" />
           </div>

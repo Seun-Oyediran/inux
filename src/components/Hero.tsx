@@ -1,32 +1,75 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Play } from '../svgs';
 import { headerRoutes } from '../Utils';
 import HeroImg from './HeroImg';
 
 const Hero = () => {
   // const [pos, setPos] = useState({ x: 0, y: 0 });
+  const [navOpen, setOpenNav] = useState(false);
 
   return (
     <div className="inux-hero-con ">
       {/* <motion.div animate={{ top: pos.y, left: pos.x }} className="mouse-follow" /> */}
-      <div className="d-flex justify-content-between align-items-center py-3 app-container app-header-fixed">
-        <div className="logo-con">
-          <img src="./img/logo.png" alt="logo" />
-        </div>
-        <div>
-          <button type="button" className="btn inux-hamburger-menu">
-            <img src="./img/hamburger.png" alt="menu" />
-          </button>
-          <div className="d-flex routes-flex">
-            {headerRoutes.map((item, index) => (
-              <Button variant="link" key={index} href={item.route}>
-                {item.name}
-              </Button>
-            ))}
+      <div className="py-3 app-container app-header-fixed">
+        <div className="d-flex justify-content-between align-items-center ">
+          <div className="logo-con">
+            <img src="./img/logo.png" alt="logo" />
+          </div>
+          <div>
+            <motion.button
+              whileInView={{ boxShadow: 'none' }}
+              type="button"
+              className="btn inux-hamburger-menu"
+              onClick={() => {
+                setOpenNav(!navOpen);
+              }}
+            >
+              {!navOpen ? (
+                <img src="./img/hamburger.png" alt="menu" />
+              ) : (
+                <h1 className="text-white">&times;</h1>
+              )}
+            </motion.button>
+            <div className="d-flex routes-flex">
+              {headerRoutes.map((item, index) => (
+                <Button variant="link" key={index} href={item.route}>
+                  {item.name}
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
+        <AnimatePresence>
+          {navOpen && (
+            <motion.div
+              key="mobile-nav"
+              className="inux-mobile-nav py-3"
+              initial="collapsed"
+              animate="open"
+              exit="collapsed"
+              variants={{
+                open: { opacity: 1, height: 'auto' },
+                collapsed: { opacity: 0, height: 0 },
+              }}
+              transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
+            >
+              {headerRoutes.map((item, index) => (
+                <motion.div
+                  variants={{ collapsed: { translateY: '50px' }, open: { translateY: '0px' } }}
+                  transition={{ duration: 0.3 }}
+                  className="d-flex justify-content-end "
+                  key={index}
+                >
+                  <a className="w-100 text-left" href={item.route}>
+                    {item.name}
+                  </a>
+                </motion.div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       <div
@@ -64,11 +107,12 @@ const Hero = () => {
               </h4>
 
               <div className="btn-con d-flex pt-5 mt-3 align-items-center">
-                <div className="btn-icon-con">
+                <div className="d-none d-md-block btn-icon-con">
                   <img src="./img/arrow.png" alt="icon" />
                 </div>
                 <motion.button
                   whileHover={{ translateY: '-5px' }}
+                  whileInView={{ boxShadow: 'none' }}
                   type="button"
                   className="d-none d-lg-flex align-items-center btn btn-primary"
                 >
@@ -78,6 +122,7 @@ const Hero = () => {
 
                 <motion.button
                   whileHover={{ translateY: '-5px' }}
+                  whileInView={{ boxShadow: 'none' }}
                   type="button"
                   className="d-flex align-items-center btn btn-outline-primary"
                 >
