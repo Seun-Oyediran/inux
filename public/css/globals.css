@@ -113,6 +113,24 @@ body {
   display: none !important;
 }
 
+.inux-mobile-nav {
+  padding-left: 10px;
+}
+
+.inux-mobile-nav a {
+  text-decoration: none;
+  color: #ffffff;
+  margin-top: 7px;
+  padding: 5px 0;
+  font-size: 17px;
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+.inux-mobile-nav a:hover {
+  color: var(--primary-color);
+}
+
 .inux-hero-con .routes-flex a {
   text-decoration: none;
   font-family: Poppins;
@@ -907,7 +925,7 @@ body {
 .inux-roadmap-container .absolute-content.first {
   position: absolute;
   top: 0;
-  left: 15.5%;
+  left: 10%;
   bottom: 0;
   right: 0;
   transform: translateY(-8px);
@@ -916,7 +934,7 @@ body {
 .inux-roadmap-container .absolute-content.second {
   position: absolute;
   top: 50%;
-  left: 15.5%;
+  left: 10%;
   bottom: 0;
   right: 0;
   transform: translateY(-10px);
@@ -925,7 +943,7 @@ body {
 .inux-roadmap-container .absolute-content.third {
   position: absolute;
   top: 100%;
-  left: 15.5%;
+  left: 10%;
   bottom: 0;
   right: 0;
   transform: translateY(-15px);

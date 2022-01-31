@@ -32,7 +32,7 @@ const CoreTeamSection = () => {
           </button>
         </div>
 
-        <div className="title py-4 my-4">
+        <div className="title py-1 my-1 py-md-4 my-md-4">
           <h2 className="text-center">Lorem ipsum</h2>
           <p className="text-center">
             consectetur adipiscing elit. Ut in justo iaculis, molestie lectus id, posuere tortor Ut
@@ -41,9 +41,9 @@ const CoreTeamSection = () => {
           </p>
         </div>
 
-        <div className="core-team-con my-5 py-4">
+        <div className="core-team-con my-4 my-md-5 py-md-4">
           <h3 className="text-center">CORE TEAM</h3>
-          <div className="first-con  mt-5 pt-5">
+          <div className="first-con mt-3 mt-md-5 pt-3 pt-md-5">
             <div className="first-grid-con">
               <TeamIcon img="./img/team_icon_1.png" />
               <TeamIcon img="./img/team_icon_2.png" />

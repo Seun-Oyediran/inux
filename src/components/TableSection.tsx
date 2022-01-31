@@ -19,7 +19,7 @@ const QuarterItem = (props: IQuarterItem) => {
         <h3 style={{ color }}>{title}</h3>
         <h6 style={{ color }}>
           2021
-          {title}
+          {` ${title}`}
         </h6>
       </div>
       <p className="my-4 py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi.</p>
@@ -32,9 +32,9 @@ const QuarterItem = (props: IQuarterItem) => {
 const TableSection = () => {
   return (
     <div className="app-container">
-      <div className="inux-table-section-container py-5">
-        <div className="currency-market-con mt-5 pt-5">
-          <div className="d-flex justify-content-between align-items-end market px-4 py-5">
+      <div className="inux-table-section-container py-2 py-md-5">
+        <div className="currency-market-con mt-2 mt-md-5 pt-2 pt-md-5">
+          <div className="d-md-flex justify-content-between align-items-end market px-4 py-5">
             <div>
               <h3>Currency Market</h3>
               <div className="d-flex align-items-center market-price">
@@ -42,7 +42,7 @@ const TableSection = () => {
                 <h6 className="mb-0">Lorem ipsum dolor sit amet, conset</h6>
               </div>
             </div>
-            <div className="d-flex align-items-center input-con">
+            <div className="d-flex align-items-center input-con mt-4 mt-md-0">
               <p className="mb-0">Search:</p>
               {' '}
               <input type="text" />

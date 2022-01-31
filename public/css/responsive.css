@@ -47,7 +47,8 @@
     padding-left: 2rem;
     margin-top: 110px;
   }
-  .inux-second-section-container .first .text-content h3 {
+  .inux-second-section-container .first .text-content h3,
+  .inux-second-section-container .third-header h3 {
     font-weight: 800;
     font-size: 35px;
     line-height: 45px;
@@ -71,10 +72,65 @@
     padding-left: 2rem;
     margin-top: 70px;
   }
-  .inux-second-section-container .first .text-content h3 {
-    font-weight: 800;
+  .inux-second-section-container .first .text-content h3,
+  .inux-core-team-section .title h2,
+  .inux-footer-container .title h3 {
+    /* font-weight: 800; */
     font-size: 30px;
     line-height: 42px;
+  }
+  .inux-core-team-section .title h2 {
+    margin: 1rem;
+  }
+  .crypro-cards-grid-container {
+    margin-bottom: 2rem;
+  }
+  .inux-core-team-section .core-team-con h3 {
+    font-size: 34px;
+    line-height: 49px;
+  }
+  .inux-core-team-section .core-team-con .first-grid-con,
+  .inux-core-team-section .core-team-con .second-grid-con {
+    gap: 80px;
+    justify-items: center;
+  }
+  .quarter-review-container .grid-con {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .inux-roadmap-container .title .text h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .inux-faqs-container .title h2 {
+    font-size: 40px;
+    line-height: 55px;
+  }
+  /* .inux-roadmap-container .content {
+    position: relative;
+    margin-top: 4rem !important;
+    margin-bottom: 20rem !important;
+  } */
+  .inux-faqs-container .faq-flex {
+    margin: 3rem 0;
+  }
+  .inux-faqs-container .accordion-con .item h3 {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .inux-faqs-container .accordion-con {
+    max-width: unset;
+  }
+  .inux-faqs-container .faq-flex .img-con {
+    max-width: unset;
+    width: 100%;
+  }
+  .inux-footer-container {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+  .inux-footer-container .quick-links-con {
+    margin-top: 4rem;
   }
 }
 
@@ -100,6 +156,31 @@
   .inux-second-section-container .third {
     margin-bottom: 2rem;
   }
+  .inux-second-section-container .first .text-content p,
+  .inux-second-section-container .third .text-content p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .inux-faqs-container .title h2 {
+    font-size: 32px;
+    line-height: 45px;
+  }
+  .inux-footer-container .quick-links-con ul {
+    padding: 0;
+  }
+  .inux-footer-container .quick-links-con > div:nth-of-type(2),
+  .inux-footer-container .quick-links-con > div:nth-of-type(3) {
+    max-width: unset;
+  }
+  .inux-footer-container .quick-links-con ul li {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .inux-footer-container .quick-links-con h3 {
+    margin-bottom: 1rem;
+    font-size: 19px;
+  }
 }
 
 @media (max-width: 500.98px) {
@@ -107,7 +188,7 @@
     padding: 0 1rem;
   }
   .inux-hero-con .logo-con {
-    max-width: 150px;
+    max-width: 180px;
   }
   .inux-hero-con .content {
     padding-left: 1rem;
@@ -136,14 +217,33 @@
   .inux-hero-con .gradient-img-con .lower-icon-con {
     display: none;
   }
-  .inux-second-section-container .first .text-content h3 {
-    font-weight: 800;
+  .inux-second-section-container .first .text-content h3,
+  .inux-core-team-section .title h2,
+  .inux-footer-container .title h3 {
+    /* font-weight: 800; */
     font-size: 26px;
     line-height: 36px;
   }
-  .inux-second-section-container .first .text-content p {
+  .inux-second-section-container .first .text-content p,
+  .inux-second-section-container .third .text-content p {
     font-size: 13px;
-    line-height: 22px;
+    line-height: 20px;
+  }
+  .inux-roadmap-container .title .text h2 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .inux-faqs-container .title h2 {
+    font-size: 27px;
+    line-height: 45px;
+  }
+  .inux-faqs-container .title p {
+    font-size: 16px;
+    line-height: 23px;
+  }
+  .inux-footer-container {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 }
 
