@@ -58,6 +58,14 @@ const RoadMap = () => {
             <RoadAbsoluteItem />
           </div>
         </div>
+
+        <div className="d-md-none">
+          {[1, 2, 3, 4, 5, 6, 7, 8].map((_, i) => (
+            <div className="d-flex justify-content-center my-5" key={i}>
+              <RoadAbsoluteItem />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
