@@ -1,6 +1,6 @@
 export const headerRoutes = [
-  { name: 'Home', route: '#' },
-  { name: 'About', route: '#' },
+  { name: 'Home', route: '#home' },
+  { name: 'About', route: '#about' },
   { name: 'Collection', route: '#' },
   { name: 'Community', route: '#' },
 ];
@@ -70,3 +70,19 @@ export const socialMediaLinksArray = [
   { name: 'instagram', url: '/', img: './img/social_instagram.png' },
   { name: 'linkedin', url: '/', img: './img/social_linkedin.png' },
 ];
+
+export const metaData = {
+  siteName: 'INUX Tech',
+  title: 'INUX Tech | Decentralized Finance Redefined',
+  description:
+    'Creation of highly efficient, secure and scalable Next-generation DeFi products on the Solana network.',
+  //   'https://res.cloudinary.com/iobami/image/upload/w_500/v1631699445/email-templates/medixab10_duqlwm.png',
+  keywords: 'inux, inux tech, crypto, solana, DeFi, finance',
+  url: '',
+
+  // geo: {
+  //   placeName: 'Ikeja',
+  //   position: '6.5474147;3.3639306',
+  //   region: 'NG',
+  // },
+};
