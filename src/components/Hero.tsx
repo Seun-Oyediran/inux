@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { AnimatePresence, motion } from 'framer-motion';
+// import Typewriter from 'typewriter-effect';
 import { Play } from '../svgs';
 import { headerRoutes } from '../Utils';
 import HeroImg from './HeroImg';
@@ -11,7 +12,7 @@ const Hero = () => {
   const [navOpen, setOpenNav] = useState(false);
 
   return (
-    <div className="inux-hero-con ">
+    <div className="inux-hero-con " id="home">
       {/* <motion.div animate={{ top: pos.y, left: pos.x }} className="mouse-follow" /> */}
       <div className="py-3 app-container app-header-fixed">
         <div className="d-flex justify-content-between align-items-center ">
@@ -63,7 +64,13 @@ const Hero = () => {
                   className="d-flex justify-content-end "
                   key={index}
                 >
-                  <a className="w-100 text-left" href={item.route}>
+                  <a
+                    className="w-100 text-left"
+                    onClick={() => {
+                      setOpenNav(false);
+                    }}
+                    href={item.route}
+                  >
                     {item.name}
                   </a>
                 </motion.div>
@@ -88,26 +95,37 @@ const Hero = () => {
               <div className="img-con d-flex align-items-center">
                 <img src="./img/landing_text_icon.png" alt="icon" />
               </div>
-              <p className="mb-0"> Lorem ipsum dolor sit </p>
+              <p className="mb-0"> Security • Efficiency • Scalability</p>
             </div>
 
             <div className="mt-5">
               <h2 className="mb-0">
-                Make your
+                Decentralized Finance
                 {' '}
-                <span>Crypto</span>
+                <span> Redefined</span>
                 {' '}
                 <br />
                 {' '}
-                Transaction
               </h2>
 
-              <h4 className="d-none d-md-block">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in justo iaculis,
-                molestie lectus id, posuere tortor. Pellentesque nisi nisl, auctor
+              {/* <h4 className="mt-3">
+                <Typewriter
+                  options={{
+                    strings: ['Affordable ', 'Fast '],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+                Transactions on the Solana Blockchain
+              </h4> */}
+
+              <h4 className="d-none d-md-block mt-3">
+                Affordable Transactions on the Solana Blockchain
+                {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in justo iaculis,
+                molestie lectus id, posuere tortor. Pellentesque nisi nisl, auctor */}
               </h4>
 
-              <div className="btn-con d-flex pt-5 mt-3 align-items-center">
+              <div className="btn-con d-flex  pt-5 mt-3 align-items-center justify-content-center justify-content-md-start">
                 <div className="d-none d-md-block btn-icon-con">
                   <img src="./img/arrow.png" alt="icon" />
                 </div>
@@ -118,17 +136,17 @@ const Hero = () => {
                   className="d-none d-lg-flex align-items-center btn btn-primary"
                 >
                   <Play />
-                  How it works
+                  WHITEPAPER
                 </motion.button>
 
                 <motion.button
                   whileHover={{ translateY: '-5px' }}
                   whileInView={{ boxShadow: 'none' }}
                   type="button"
-                  className="d-flex align-items-center btn btn-outline-primary"
+                  className="d-flex align-items-center btn btn-outline-primary whitepaper-button justify-content-center"
                 >
                   <Play />
-                  Lorem Ipsum
+                  WHITEPAPER
                 </motion.button>
               </div>
             </div>
@@ -138,7 +156,7 @@ const Hero = () => {
         <div className="hero-img d-none d-md-flex justify-content-center justify-content-md-end mt-5 mt-md-0 pt-5 pt-md-0">
           <HeroImg />
         </div>
-        <div className="d-flex d-md-none justify-content-center my-4">
+        <div className="d-flex d-md-none justify-content-center my-4 mt-5">
           <Counter />
         </div>
       </div>
