@@ -86,3 +86,20 @@ export const metaData = {
   //   region: 'NG',
   // },
 };
+
+export const currencyFormat = (number: any) => {
+  const num = parseFloat(number);
+  return `$${num.toFixed(7).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}`;
+};
+
+export const cryptoFormatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  maximumFractionDigits: 7,
+});
+
+export const cryptoCardFormatter = new Intl.NumberFormat('en-US', {
+  // style: 'currency',
+  // currency: 'USD',
+  maximumFractionDigits: 7,
+});

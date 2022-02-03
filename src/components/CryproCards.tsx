@@ -1,20 +1,29 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
+import { fetchTableCoins } from '../axios';
+import { cryptoCardFormatter } from '../Utils';
 
 interface ICryptoCard {
-  img: string;
+  img?: string;
+  symbol?: string;
+  name?: string;
+  price?: number;
 }
 
-const iconsArray = ['./img/card_logo_1.png', './img/card_logo_2.png', './img/card_logo_3.png'];
+const mins = 10;
 
 const CryptoCard = (props: ICryptoCard) => {
-  const { img } = props;
+  const {
+    img, symbol, name, price,
+  } = props;
+
   useEffect(() => {
     AOS.init({
       offset: 150,
       duration: 500,
       easing: 'ease-in-sine',
       delay: 50,
+      anchorPlacement: 'bottom-bottom',
     });
     // AOS.refresh();
   }, []);
@@ -26,8 +35,11 @@ const CryptoCard = (props: ICryptoCard) => {
           <div className="icon-con">
             <img src={img} alt="bitcoin" />
           </div>
-          <h5>Lorem coin</h5>
-          <p>USD 10,000.00</p>
+          <h5>{name}</h5>
+          <p>
+            USD
+            {cryptoCardFormatter.format(price)}
+          </p>
         </div>
         <div
           className="d-flex flex-column  justify-content-between align-items-end"
@@ -36,7 +48,7 @@ const CryptoCard = (props: ICryptoCard) => {
           <div className="stock-con">
             <img src="./img/stocks.png" alt="stocks" />
           </div>
-          <h6>BTC</h6>
+          <h6 className="text-uppercase">{symbol}</h6>
         </div>
       </div>
     </div>
@@ -44,12 +56,38 @@ const CryptoCard = (props: ICryptoCard) => {
 };
 
 const CryproCards = () => {
+  const [tableData, setTableData] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await fetchTableCoins(3);
+
+      setTableData(data);
+    };
+
+    getData();
+
+    const interval = setInterval(() => {
+      getData();
+    }, 1000 * mins * 60);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <div className="app-container">
       <div className="py-4 crypro-cards-grid-container">
         <div className="crypro-cards-grid-con">
-          {iconsArray.map((item, i) => (
-            <CryptoCard img={item} key={i} />
+          {tableData.map((item: any, i) => (
+            <CryptoCard
+              img={item?.image}
+              key={i}
+              symbol={item?.symbol}
+              name={item?.name}
+              price={item?.current_price}
+            />
           ))}
         </div>
       </div>
