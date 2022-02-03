@@ -7,7 +7,7 @@ interface ICryptoCard {
   img?: string;
   symbol?: string;
   name?: string;
-  price?: number;
+  price: number;
 }
 
 const mins = 10;
