@@ -27,10 +27,11 @@ const bitcoinOptions = {
 const SecondSection = () => {
   useEffect(() => {
     AOS.init({
-      offset: 150,
+      offset: 100,
       duration: 500,
-      easing: 'ease-in-sine',
+      easing: 'linear',
       delay: 50,
+      anchorPlacement: 'bottom-bottom',
     });
     // AOS.refresh();
   }, []);
@@ -120,14 +121,14 @@ const SecondSection = () => {
             className="btn btn-primary py-2 px-5 d-flex justify-content-center align-items-center bg-transparent"
           >
             <BigButtonIcon />
-            About Lorem
+            About Us
           </button>
         </div>
 
         <div className="my-3 my-md-5 py-md-5">
-          <div className="third-header">
+          {/* <div className="third-header">
             <h3>About Us</h3>
-          </div>
+          </div> */}
           <div className="third d-md-flex justify-content-between">
             <div
               className="text-content d-flex justify-content-center align-items-center flex-column"

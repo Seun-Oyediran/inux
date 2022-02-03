@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import type { NextPage } from 'next';
+import { motion } from 'framer-motion';
 import {
   CoreTeamSection,
   CryptoCards,
@@ -17,7 +18,15 @@ const Home: NextPage = () => {
   return (
     <Fragment>
       <Header data={metaData} />
-      <div>
+      {/* <motion.div className="inux-loader-position-fixed">
+        <div>
+          <img src="./img/logo.png" alt="logo" />
+        </div>
+        <div className="lds-circle">
+          <div />
+        </div>
+      </motion.div> */}
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
         <Hero />
         <SecondSection />
         <CryptoCards />
@@ -26,7 +35,7 @@ const Home: NextPage = () => {
         <RoadMap />
         <FAQs />
         <Footer />
-      </div>
+      </motion.div>
     </Fragment>
   );
 };

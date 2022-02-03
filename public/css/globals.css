@@ -394,8 +394,8 @@ body {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 19px;
-  line-height: 28px;
+  font-size: 23px;
+  line-height: 38px;
   color: #ffffff;
 }
 
@@ -438,7 +438,7 @@ body {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   color: #ffffff;
 }
@@ -475,8 +475,8 @@ body {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 37px;
+  font-size: 23px;
+  line-height: 38px;
 
   color: #ffffff;
 }
@@ -670,8 +670,8 @@ body {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 13px;
-  line-height: 19px;
+  font-size: 16px;
+  line-height: 26px;
   text-align: center;
   color: #ffffff;
   margin: 0;
@@ -1258,4 +1258,56 @@ body {
 }
 /* ===================================
     FOOTER STYLE ENDS HERE
+====================================== */
+
+/* ===================================
+    LOADER STYLE STARTS HERE
+====================================== */
+
+.inux-loader-position-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lds-circle {
+  display: inline-block;
+  transform: translateZ(1px);
+}
+.lds-circle > div {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  background: #fff;
+  animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+@keyframes lds-circle {
+  0%,
+  100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
+
+/* ===================================
+    LOADER STYLE ENDS HERE
 ====================================== */

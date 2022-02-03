@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
-import { quarterItemArray } from '../Utils';
+import { cryptoFormatter, quarterItemArray } from '../Utils';
+import { fetchTableCoins } from '../axios';
 
 interface IQuarterItem {
   title: string;
@@ -8,21 +9,25 @@ interface IQuarterItem {
   img: string;
 }
 
+const mins = 10;
+
 const QuarterItem = (props: IQuarterItem) => {
   const { title, color, img } = props;
 
   useEffect(() => {
     AOS.init({
-      offset: 150,
+      offset: 200,
       duration: 500,
       easing: 'ease-in-sine',
       delay: 50,
+      anchorPlacement: 'bottom-bottom',
     });
+
     // AOS.refresh();
   }, []);
 
   return (
-    <div className="quarter-item" data-aos="fade-up">
+    <div className="quarter-item" data-aos="zoom-in">
       <div className="title mb-5 pb-3">
         <div className="img-con">
           <img src={img} alt="red arrow" />
@@ -41,6 +46,26 @@ const QuarterItem = (props: IQuarterItem) => {
 };
 
 const TableSection = () => {
+  const [tableData, setTableData] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await fetchTableCoins(15);
+
+      setTableData(data);
+    };
+
+    getData();
+
+    const interval = setInterval(() => {
+      getData();
+    }, 1000 * mins * 60);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <div className="app-container">
       <div className="inux-table-section-container py-2 py-md-5">
@@ -74,36 +99,34 @@ const TableSection = () => {
                 </th>
                 <th>
                   <button type="button" className="btn w-100 d-flex justify-content-between">
-                    Loreum
+                    Price
                     {' '}
                     <img src="./img/table_header_icon.svg" alt="icon" />
                   </button>
                 </th>
                 <th>
                   <button type="button" className="btn w-100 d-flex justify-content-between">
-                    Loreum
+                    24h
+                    <img src="./img/table_header_icon.svg" alt="icon" />
+                  </button>
+                </th>
+                <th>
+                  <button type="button" className="btn w-100 d-flex justify-content-between">
+                    24h Volume
                     {' '}
                     <img src="./img/table_header_icon.svg" alt="icon" />
                   </button>
                 </th>
                 <th>
                   <button type="button" className="btn w-100 d-flex justify-content-between">
-                    Loreum
+                    Market Cap
                     {' '}
                     <img src="./img/table_header_icon.svg" alt="icon" />
                   </button>
                 </th>
                 <th>
                   <button type="button" className="btn w-100 d-flex justify-content-between">
-                    Loreum
-                    {' '}
-                    <img src="./img/table_header_icon.svg" alt="icon" />
-                  </button>
-                </th>
-                <th>
-                  <button type="button" className="btn w-100 d-flex justify-content-between">
-                    Loreum
-                    {' '}
+                    ATH
                     <img src="./img/table_header_icon.svg" alt="icon" />
                   </button>
                 </th>
@@ -114,36 +137,42 @@ const TableSection = () => {
               </tr>
             </thead>
             <tbody>
-              {[1, 1, 0, 1, 0, 1, 0, 1, 0].map((item, index) => (
+              {tableData.map((item: any, index) => (
                 <tr key={index}>
                   <td className="text-white" colSpan={2}>
                     <div className="d-flex first align-items-center">
-                      <img src="./img/table_bitcoin_icon.svg" alt="bitcoin icon" />
-                      <p className="mb-0">Binance coin</p>
+                      <img src={item?.image} alt={item?.name} />
+                      <p className="mb-0">{item?.name}</p>
                     </div>
                   </td>
                   <td className="align-middle">
-                    <p className="mb-0">$566900.99</p>
+                    <p className="mb-0">{cryptoFormatter.format(item?.current_price)}</p>
                   </td>
                   <td className="align-middle">
                     <div className="d-flex chart align-items-center">
-                      {item === 1 ? (
+                      {item?.market_cap_change_percentage_24h < 0 ? (
                         <img src="./img/table_fall_icon.svg" alt="fall icon" />
                       ) : (
-                        <img src="./img/table_rise_icon.svg" alt="fall icon" />
+                        <img src="./img/table_rise_icon.svg" alt="rise icon" />
                       )}
 
-                      <p className="mb-0">2.90%</p>
+                      <p className="mb-0">
+                        {item?.market_cap_change_percentage_24h.toFixed(2)}
+                        %
+                      </p>
                     </div>
                   </td>
                   <td className="align-middle">
-                    <p className="mb-0">$78,980,200.89</p>
+                    <p className="mb-0">{cryptoFormatter.format(item?.total_volume)}</p>
                   </td>
                   <td className="align-middle">
-                    <p className="mb-0">20M</p>
+                    <p className="mb-0">{cryptoFormatter.format(item?.market_cap)}</p>
                   </td>
                   <td className="align-middle">
-                    <p className="mb-0"> $43,089.200</p>
+                    <p className="mb-0">
+                      {' '}
+                      {cryptoFormatter.format(item?.ath)}
+                    </p>
                   </td>
                 </tr>
               ))}
