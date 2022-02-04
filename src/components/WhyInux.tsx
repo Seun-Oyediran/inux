@@ -7,13 +7,10 @@ interface IWhyInuxItem {
   title: string;
   details: string;
   lottie: any;
-  delay: number;
 }
 
 const WhyInuxItem = (props: IWhyInuxItem) => {
-  const {
-    title, details, lottie, delay,
-  } = props;
+  const { title, details, lottie } = props;
   const options = {
     loop: true,
     autoplay: true,
@@ -36,7 +33,6 @@ const WhyInuxItem = (props: IWhyInuxItem) => {
       style={{ gap: '1rem' }}
       className="why-inux-item d-md-flex flex-column justify-content-between"
       data-aos="zoom-in-left"
-      data-aos-delay={`${delay}`}
     >
       <div>
         <Lottie options={options} />
@@ -64,7 +60,6 @@ const WhyInux = () => {
               details={item.details}
               lottie={item.lottie}
               key={index}
-              delay={50 * (index + 1)}
             />
           ))}
         </div>

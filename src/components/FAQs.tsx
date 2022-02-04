@@ -4,14 +4,13 @@ import AOS from 'aos';
 import { FAQArray } from '../Utils';
 
 interface IFAQItem {
-  initial: boolean;
   title: string;
   details: string;
 }
 
 const FAQItem = (props: IFAQItem) => {
-  const { initial, title, details } = props;
-  const [open, setOpen] = useState(initial);
+  const { title, details } = props;
+  const [open, setOpen] = useState(false);
   return (
     <div className="item">
       <button
@@ -39,7 +38,7 @@ const FAQItem = (props: IFAQItem) => {
               open: { opacity: 1, height: 'auto' },
               collapsed: { opacity: 0, height: 0 },
             }}
-            transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
           >
             <motion.p
               variants={{ collapsed: { scale: 0.8, opacity: 0.3 }, open: { scale: 1, opacity: 1 } }}
@@ -87,7 +86,7 @@ const FAQs = () => {
           </div>
           <div className="accordion-con" data-aos="zoom-in">
             {FAQArray.map((item, i) => (
-              <FAQItem initial={i === 0} details={item.details} title={item.title} />
+              <FAQItem details={item.details} title={item.title} key={i} />
             ))}
           </div>
           <div data-aos="zoom-in" className="mt-4 mt-md-0 img-con d-none d-md-block">

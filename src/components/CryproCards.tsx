@@ -8,14 +8,13 @@ interface ICryptoCard {
   symbol?: string;
   name?: string;
   price: number;
-  delay: number;
 }
 
 const mins = 10;
 
 const CryptoCard = (props: ICryptoCard) => {
   const {
-    img, symbol, name, price, delay,
+    img, symbol, name, price,
   } = props;
 
   useEffect(() => {
@@ -29,7 +28,7 @@ const CryptoCard = (props: ICryptoCard) => {
   }, []);
 
   return (
-    <div className="crypto-card" data-aos="flip-left" data-aos-delay={`${delay}`}>
+    <div className="crypto-card" data-aos="flip-left">
       <div className="child d-flex  justify-content-center ">
         <div>
           <div className="icon-con">
@@ -87,7 +86,6 @@ const CryproCards = () => {
               symbol={item?.symbol}
               name={item?.name}
               price={item?.current_price}
-              delay={50 * (i + 1)}
             />
           ))}
         </div>
