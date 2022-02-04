@@ -7,7 +7,6 @@ interface IQuarterItem {
   title: string;
   color: string;
   img: string;
-  delay: number;
   index: number;
   options: Array<string>;
 }
@@ -29,7 +28,7 @@ interface IQuarterItem {
 
 const QuarterItem = (props: IQuarterItem) => {
   const {
-    title, color, img, delay, index, options,
+    title, color, img, index, options,
   } = props;
 
   useEffect(() => {
@@ -45,7 +44,7 @@ const QuarterItem = (props: IQuarterItem) => {
   }, []);
 
   return (
-    <div className="quarter-item" data-aos="zoom-in" data-aos-delay={`${delay}`}>
+    <div className="quarter-item" data-aos="zoom-in">
       <div className="title mb-3 pb-3">
         <div className="img-con">
           <img src={img} alt="red arrow" />
@@ -124,7 +123,6 @@ const RoadMap = () => {
                 color={item.color}
                 title={item.title}
                 img={item.img}
-                delay={50 * (i + 1)}
                 index={i}
                 options={item.options}
               />
