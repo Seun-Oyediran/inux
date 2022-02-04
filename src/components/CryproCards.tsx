@@ -87,7 +87,7 @@ const CryproCards = () => {
               symbol={item?.symbol}
               name={item?.name}
               price={item?.current_price}
-              delay={200 * (i + 1)}
+              delay={50 * (i + 1)}
             />
           ))}
         </div>
