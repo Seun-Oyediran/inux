@@ -54,7 +54,7 @@ const Counter = () => {
   return (
     <div className=" d-flex pb-2">
       <div className="counter-con px-3 py-2 pb-4">
-        <p className="text-center">Lorem ipsum dolor sit</p>
+        <p className="text-center">Countdown to launch</p>
         <div className="d-flex justify-content-center counter-item-con">
           <CounterItem bg="#37a2fd" value={counterData.days} unit="Days" />
           <CounterItem bg="#59B313" value={counterData.hours} unit="Hours" />

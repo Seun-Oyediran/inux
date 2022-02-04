@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import AOS from 'aos';
+import { FAQArray } from '../Utils';
 
 interface IFAQItem {
   initial: boolean;
+  title: string;
+  details: string;
 }
 
 const FAQItem = (props: IFAQItem) => {
-  const { initial } = props;
+  const { initial, title, details } = props;
   const [open, setOpen] = useState(initial);
   return (
     <div className="item">
@@ -18,7 +21,7 @@ const FAQItem = (props: IFAQItem) => {
         type="button"
         className="btn text-white d-flex justify-content-between align-items-center w-100 px-0 py-3"
       >
-        <h3 className="mb-0">Lorem wop ipsum</h3>
+        <h3 className="mb-0">{title}</h3>
         <h2 className="mb0">
           {' '}
           {open ? '-' : '+'}
@@ -39,13 +42,11 @@ const FAQItem = (props: IFAQItem) => {
             transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
             <motion.p
-              variants={{ collapsed: { scale: 0.8 }, open: { scale: 1 } }}
+              variants={{ collapsed: { scale: 0.8, opacity: 0.3 }, open: { scale: 1, opacity: 1 } }}
               transition={{ duration: 0.3 }}
               className="py-3"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit. Morbi Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Morbi.
+              {details}
             </motion.p>
           </motion.div>
         )}
@@ -58,8 +59,8 @@ const FAQs = () => {
   useEffect(() => {
     AOS.init({
       offset: 150,
-      duration: 500,
-      easing: 'ease-in-sine',
+      duration: 800,
+      // easing: 'ease-in-sine',
       delay: 50,
     });
     // AOS.refresh();
@@ -67,7 +68,7 @@ const FAQs = () => {
 
   return (
     <div className="app-container">
-      <div className="inux-faqs-container">
+      <div className="inux-faqs-container mt-5">
         <div className="title">
           <h2 className="text-center">
             {' '}
@@ -85,12 +86,11 @@ const FAQs = () => {
             <img src="./img/faq.png" alt="faq" />
           </div>
           <div className="accordion-con" data-aos="zoom-in">
-            <FAQItem initial />
-            <FAQItem initial={false} />
-            <FAQItem initial={false} />
-            <FAQItem initial={false} />
+            {FAQArray.map((item, i) => (
+              <FAQItem initial={i === 0} details={item.details} title={item.title} />
+            ))}
           </div>
-          <div className="mt-4 mt-md-0 img-con d-none d-md-block">
+          <div data-aos="zoom-in" className="mt-4 mt-md-0 img-con d-none d-md-block">
             <img src="./img/faq.png" alt="faq" />
           </div>
         </div>

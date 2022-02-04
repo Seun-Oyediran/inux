@@ -133,7 +133,7 @@ const Hero = () => {
                   whileHover={{ translateY: '-5px' }}
                   whileInView={{ boxShadow: 'none' }}
                   type="button"
-                  className="d-none d-lg-flex align-items-center btn btn-primary"
+                  className="d-none  align-items-center btn btn-primary"
                 >
                   <Play />
                   WHITEPAPER

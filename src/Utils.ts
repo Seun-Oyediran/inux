@@ -1,8 +1,12 @@
+import SecurityLottie from './lottie/security.json';
+import EfficientLottie from './lottie/efficient.json';
+import ScalableLottie from './lottie/scalable.json';
+
 export const headerRoutes = [
   { name: 'Home', route: '#home' },
   { name: 'About', route: '#about' },
-  { name: 'Collection', route: '#' },
-  { name: 'Community', route: '#' },
+  { name: 'Contact Us', route: '#contact' },
+  { name: 'Whitepaper', route: '#' },
 ];
 
 export const countdownOptionsArray = [
@@ -58,10 +62,36 @@ export const getTimeDiff = (endDate: number, startDate: number) => {
 };
 
 export const quarterItemArray = [
-  { title: 'Q1', color: '#E82768', img: './img/red_arrow.png' },
-  { title: 'Q2', color: '#33CCFF', img: './img/blue_arrow.png' },
-  { title: 'Q3', color: '#CCDF23 ', img: './img/yellow_arrow.png' },
-  { title: 'Q4', color: '#21EDBA', img: './img/green_arrow.png' },
+  {
+    title: 'S1',
+    color: '#E82768',
+    img: './img/red_arrow.png',
+    options: [
+      'Whitepaper',
+      'Social research',
+      'Marketing preparation',
+      'Wireframe',
+      'Ecosystem Idea',
+    ],
+  },
+  {
+    title: 'S2',
+    color: '#33CCFF',
+    img: './img/blue_arrow.png',
+    options: ['Private Sale', 'IDO', 'Partnerships', 'Staking pools'],
+  },
+  {
+    title: 'S3',
+    color: '#CCDF23 ',
+    img: './img/yellow_arrow.png',
+    options: ['GUI', 'Inux Swap', 'Inux DEX', 'Listing on DEX'],
+  },
+  {
+    title: 'S4',
+    color: '#21EDBA',
+    img: './img/green_arrow.png',
+    options: ['Listing on CEX', 'IDO Launchpad', 'Wormhole bridge'],
+  },
 ];
 
 export const socialMediaLinksArray = [
@@ -103,3 +133,42 @@ export const cryptoCardFormatter = new Intl.NumberFormat('en-US', {
   // currency: 'USD',
   maximumFractionDigits: 7,
 });
+
+export const FAQArray = [
+  {
+    title: 'When is the Inux Ecosystem’s private sale?',
+    details:
+      'We are planning to start our private sale in the second quarter of 2022. Check the Whitepaper for more info.',
+  },
+  {
+    title: 'How Do I Participate In The Private Sale?',
+    details:
+      'More details regarding this are coming soon. Subscribe to our newsletter to get updates on upcoming events.',
+  },
+  {
+    title: 'What Utility does the Inux Token provide?',
+    details:
+      'The Inux token is going to power the whole INUX ecosystem. Every Inux token holder has voting rights and can access the IDO launchpad, staking pools, and other exclusive features.',
+  },
+];
+
+export const whyArray = [
+  {
+    title: 'Security',
+    details:
+      'Leveraging decentralized technology to keep the ecosystem secure and transactions safe.',
+    lottie: SecurityLottie,
+  },
+  {
+    title: 'Efficiency',
+    details:
+      'Create efficient mechanisms to assist users in obtaining affordable and fast transactions.',
+    lottie: EfficientLottie,
+  },
+  {
+    title: 'Scalability',
+    details:
+      'Create efficient mechanisms to assist users in obtaining affordable and fast transactions.',
+    lottie: ScalableLottie,
+  },
+];

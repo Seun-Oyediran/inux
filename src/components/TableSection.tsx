@@ -1,49 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import AOS from 'aos';
-import { cryptoFormatter, quarterItemArray } from '../Utils';
+import { cryptoFormatter } from '../Utils';
 import { fetchTableCoins } from '../axios';
 
-interface IQuarterItem {
-  title: string;
-  color: string;
-  img: string;
-}
-
 const mins = 10;
-
-const QuarterItem = (props: IQuarterItem) => {
-  const { title, color, img } = props;
-
-  useEffect(() => {
-    AOS.init({
-      offset: 200,
-      duration: 500,
-      easing: 'ease-in-sine',
-      delay: 50,
-      anchorPlacement: 'bottom-bottom',
-    });
-
-    // AOS.refresh();
-  }, []);
-
-  return (
-    <div className="quarter-item" data-aos="zoom-in">
-      <div className="title mb-5 pb-3">
-        <div className="img-con">
-          <img src={img} alt="red arrow" />
-        </div>
-        <h3 style={{ color }}>{title}</h3>
-        <h6 style={{ color }}>
-          2021
-          {` ${title}`}
-        </h6>
-      </div>
-      <p className="my-4 py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi.</p>
-      <p className="my-4 py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi.</p>
-      <p className="my-4 py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi.</p>
-    </div>
-  );
-};
 
 const TableSection = () => {
   const [tableData, setTableData] = useState([]);
@@ -69,7 +28,7 @@ const TableSection = () => {
   return (
     <div className="app-container">
       <div className="inux-table-section-container py-2 py-md-5">
-        <div className="currency-market-con mt-2 mt-md-5 pt-2 pt-md-5">
+        {/* <div className="currency-market-con mt-2 mt-md-5 pt-2 pt-md-5">
           <div className="d-md-flex justify-content-between align-items-end market px-4 py-5">
             <div>
               <h3>Currency Market</h3>
@@ -79,12 +38,10 @@ const TableSection = () => {
               </div>
             </div>
             <div className="d-flex align-items-center input-con mt-4 mt-md-0">
-              <p className="mb-0">Search:</p>
-              {' '}
-              <input type="text" />
+              <p className="mb-0">Search:</p> <input type="text" />
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="table-responsive my-5 scrollbar horizontal">
           <table className="inux-table table">
@@ -180,13 +137,19 @@ const TableSection = () => {
           </table>
         </div>
 
-        <div className="quarter-review-container mt-5">
+        {/* <div className="quarter-review-container mt-5">
           <div className="grid-con ">
             {quarterItemArray.map((item, i) => (
-              <QuarterItem key={i} color={item.color} title={item.title} img={item.img} />
+              <QuarterItem
+                key={i}
+                color={item.color}
+                title={item.title}
+                img={item.img}
+                delay={200 * (i + 1)}
+              />
             ))}
           </div>
-        </div>
+        </div> */}
 
         <hr className="table-bottom-divider" />
       </div>
