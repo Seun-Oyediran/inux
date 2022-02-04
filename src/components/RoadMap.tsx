@@ -124,7 +124,7 @@ const RoadMap = () => {
                 color={item.color}
                 title={item.title}
                 img={item.img}
-                delay={200 * (i + 1)}
+                delay={50 * (i + 1)}
                 index={i}
                 options={item.options}
               />

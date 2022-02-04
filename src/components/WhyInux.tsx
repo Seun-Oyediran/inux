@@ -64,7 +64,7 @@ const WhyInux = () => {
               details={item.details}
               lottie={item.lottie}
               key={index}
-              delay={200 * (index + 1)}
+              delay={50 * (index + 1)}
             />
           ))}
         </div>
