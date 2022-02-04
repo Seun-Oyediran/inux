@@ -24,7 +24,7 @@ html {
 
 body {
   width: 100%;
-  /* background-color: #000; */
+  background-color: #000;
   color: #ffffff;
 }
 
@@ -418,6 +418,8 @@ body {
 .inux-second-section-container .second .item .icon-con {
   width: 80px;
   height: 80px;
+  min-width: 80px;
+  min-height: 80px;
 }
 
 .inux-second-section-container .second .item .item-text {
@@ -435,11 +437,11 @@ body {
 }
 
 .inux-second-section-container .second .item .item-text p {
-  font-family: Roboto;
+  font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 26px;
   color: #ffffff;
 }
 
@@ -483,6 +485,52 @@ body {
 
 /* ===================================
     SECOND SECTION STYLE ENDS HERE
+====================================== */
+
+/* ===================================
+    WHY INUX STYLE STARTS HERE
+====================================== */
+.inux-why-inux-container .title h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 74px;
+  color: #ffffff;
+  margin: 2rem 0;
+}
+
+.inux-why-inux-container .why-inux-item {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.inux-why-inux-container .why-inux-item h3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 40px;
+  color: #ffffff;
+}
+
+.inux-why-inux-container .why-inux-item p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 27px;
+  color: #ffffff;
+}
+
+.why-inux-grid-con {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+}
+/* ===================================
+    WHY INUX STYLE ENDS HERE
 ====================================== */
 
 /* ===================================
@@ -643,13 +691,14 @@ body {
   max-width: 900px;
   display: grid;
   gap: 150px;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   margin-left: auto;
   margin-right: auto;
 }
 
 .inux-core-team-section .core-team-con .second-grid-con {
   max-width: 1200px;
+  justify-items: center;
 }
 
 .inux-core-team-section .core-team-con .first-grid-con .item,
@@ -857,7 +906,7 @@ body {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 24px;
   color: #ffffff;
 }
@@ -1056,9 +1105,10 @@ body {
 .inux-faqs-container .accordion-con .item h3 {
   font-family: Poppins;
   font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
+  font-weight: 600;
+  font-size: 22px;
   line-height: 47px;
+  margin-right: 1rem;
   color: #ffffff;
 }
 
@@ -1278,35 +1328,95 @@ body {
   flex-direction: column;
 }
 
-.lds-circle {
-  display: inline-block;
-  transform: translateZ(1px);
+.inux-loader-position-fixed > div {
+  max-width: 200px;
 }
-.lds-circle > div {
+
+/* .lds-roller {
   display: inline-block;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: #fff;
-  animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  opacity: 0.6;
+  margin: -4px 0 0 -4px;
 }
-@keyframes lds-circle {
-  0%,
-  100% {
-    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
-  }
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
   0% {
-    transform: rotateY(0deg);
-  }
-  50% {
-    transform: rotateY(1800deg);
-    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotateY(3600deg);
+    transform: rotate(360deg);
   }
-}
+} */
 
 /* ===================================
     LOADER STYLE ENDS HERE

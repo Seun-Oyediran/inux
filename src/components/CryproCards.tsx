@@ -8,28 +8,28 @@ interface ICryptoCard {
   symbol?: string;
   name?: string;
   price: number;
+  delay: number;
 }
 
 const mins = 10;
 
 const CryptoCard = (props: ICryptoCard) => {
   const {
-    img, symbol, name, price,
+    img, symbol, name, price, delay,
   } = props;
 
   useEffect(() => {
     AOS.init({
       offset: 150,
-      duration: 500,
+      duration: 300,
       easing: 'ease-in-sine',
-      delay: 50,
       anchorPlacement: 'bottom-bottom',
     });
     // AOS.refresh();
   }, []);
 
   return (
-    <div className="crypto-card" data-aos="flip-left">
+    <div className="crypto-card" data-aos="flip-left" data-aos-delay={`${delay}`}>
       <div className="child d-flex  justify-content-center ">
         <div>
           <div className="icon-con">
@@ -38,7 +38,7 @@ const CryptoCard = (props: ICryptoCard) => {
           <h5>{name}</h5>
           <p>
             USD
-            {cryptoCardFormatter.format(price)}
+            {` ${cryptoCardFormatter.format(price)}`}
           </p>
         </div>
         <div
@@ -78,7 +78,7 @@ const CryproCards = () => {
 
   return (
     <div className="app-container">
-      <div className="py-4 crypro-cards-grid-container">
+      <div className="py-4 mt-5 crypro-cards-grid-container">
         <div className="crypro-cards-grid-con">
           {tableData.map((item: any, i) => (
             <CryptoCard
@@ -87,6 +87,7 @@ const CryproCards = () => {
               symbol={item?.symbol}
               name={item?.name}
               price={item?.current_price}
+              delay={200 * (i + 1)}
             />
           ))}
         </div>

@@ -29,9 +29,9 @@ const SecondSection = () => {
     AOS.init({
       offset: 100,
       duration: 500,
-      easing: 'linear',
+      // easing: 'linear',
       delay: 50,
-      anchorPlacement: 'bottom-bottom',
+      // anchorPlacement: 'bottom-bottom',
     });
     // AOS.refresh();
   }, []);
@@ -67,28 +67,38 @@ const SecondSection = () => {
           </div>
 
           <div className="text-content d-flex justify-content-center align-items-center flex-column ">
-            <div className="d-flex item my-4 " data-aos="zoom-in">
-              <div className="icon-con">
-                <img src="./img/second_section_icon_1.png" alt="icon1" />
+            <div className="d-lg-flex item my-4 " data-aos="zoom-in">
+              <div className="d-flex justify-content-center">
+                <div className="icon-con ">
+                  <img src="./img/second_section_icon_1.png" alt="icon1" />
+                </div>
               </div>
               <div className="item-text d-flex flex-column justify-content-between">
                 <h4 className="mb-0">IDO launchpad</h4>
                 <p className="mb-0">
-                  consectetur adipiscing elit. Ut in justo iaculis, molestie lectus id, posuere
-                  tortor
+                  The IDO Launchpad is a core part of the INUX ecosystem.
+                  {' '}
+                  {'Inux"s '}
+                  IDO launchpad allows crypto projects to sell tokens for future DeFi Crypto
+                  launches. The purpose of INUX is to create a fully decentralized IDO launchpad
+                  where everyone can inves
                 </p>
               </div>
             </div>
 
-            <div className="d-flex item my-4" data-aos="zoom-in">
-              <div className="icon-con">
-                <img src="./img/second_section_icon_2.png" alt="icon1" />
+            <div className="d-lg-flex item my-4" data-aos="zoom-in">
+              <div className="d-flex justify-content-center">
+                <div className="icon-con">
+                  <img src="./img/second_section_icon_2.png" alt="icon1" />
+                </div>
               </div>
               <div className="item-text d-flex flex-column justify-content-between">
                 <h4 className="mb-0">DEX (Decentralized Exchange)</h4>
                 <p className="mb-0">
-                  consectetur adipiscing elit. Ut in justo iaculis, molestie lectus id, posuere
-                  tortor
+                  Inux intends to build Inux DEX, a decentralized exchange built on the Solana
+                  blockchain, to enable faster and affordable transactions. Due to their poor
+                  speeds, limited scalability, and high transaction fees, most users have trouble
+                  trading on token exchanges built on the Ethereum network.
                 </p>
               </div>
             </div>
@@ -114,8 +124,8 @@ const SecondSection = () => {
             </div>
           </div>
         </div>
-
-        <div className="big-btn-con py-5 d-flex justify-content-center" id="about">
+        <div id="about" className="py-5" />
+        <div className="big-btn-con d-flex justify-content-center">
           <button
             type="button"
             className="btn btn-primary py-2 px-5 d-flex justify-content-center align-items-center bg-transparent"
