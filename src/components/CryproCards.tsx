@@ -59,9 +59,13 @@ const CryproCards = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const data = await fetchTableCoins(3);
+      try {
+        const data = await fetchTableCoins(3);
 
-      setTableData(data);
+        setTableData(data);
+      } catch (error) {
+        // console.log();
+      }
     };
 
     getData();

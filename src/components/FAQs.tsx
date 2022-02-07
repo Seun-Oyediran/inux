@@ -74,10 +74,10 @@ const FAQs = () => {
             Frequently
             <strong> Asked Questions</strong>
           </h2>
-          <p className="text-center">
+          {/* <p className="text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi.Lorem ipsum dolor sit
             amet, consectetur adipiscing elit. Morbi.
-          </p>
+          </p> */}
         </div>
 
         <div className="faq-flex d-md-flex justify-content-between align-items-center">

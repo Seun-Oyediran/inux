@@ -69,7 +69,8 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom-content">
-          <div className="d-flex flex-column flex-md-row justify-content-around quick-links-con">
+          {/* <div className="d-flex flex-column
+          flex-md-row justify-content-around quick-links-con">
             <div className="logo-con">
               <img src="./img/logo.png" alt="inux" />
               <p>
@@ -150,10 +151,10 @@ const Footer = () => {
                 </a>
               </ul>
             </div>
-          </div>
-
+          </div> */}
+          <div className="my-2 py-1" />
           <hr />
-
+          <div className="my-2 py-1" />
           <div className="copyrights-con">
             <div className="d-md-flex justify-content-between first">
               <h4>Copyright @inuxTech all rights reserved.</h4>
