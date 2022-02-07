@@ -9,9 +9,13 @@ const TableSection = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const data = await fetchTableCoins(15);
+      try {
+        const data = await fetchTableCoins(15);
 
-      setTableData(data);
+        setTableData(data);
+      } catch (error) {
+        // console.log(error);
+      }
     };
 
     getData();
