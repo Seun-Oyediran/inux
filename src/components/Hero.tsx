@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { AnimatePresence, motion } from 'framer-motion';
 // import Typewriter from 'typewriter-effect';
+import { useRouter } from 'next/router';
 import { Play } from '../svgs';
 import { headerRoutes } from '../Utils';
 import HeroImg from './HeroImg';
@@ -9,6 +10,7 @@ import Counter from './Counter';
 
 const Hero = () => {
   // const [pos, setPos] = useState({ x: 0, y: 0 });
+  const router = useRouter();
   const [navOpen, setOpenNav] = useState(false);
 
   return (
@@ -129,6 +131,7 @@ const Hero = () => {
                 <div className="d-none d-md-block btn-icon-con">
                   <img src="./img/arrow.png" alt="icon" />
                 </div>
+
                 <motion.button
                   whileHover={{ translateY: '-5px' }}
                   whileInView={{ boxShadow: 'none' }}
@@ -139,15 +142,20 @@ const Hero = () => {
                   WHITEPAPER
                 </motion.button>
 
+                {/* <a href="/whitepaper/whitepaper.pdf"> */}
                 <motion.button
                   whileHover={{ translateY: '-5px' }}
                   whileInView={{ boxShadow: 'none' }}
                   type="button"
                   className="d-flex align-items-center btn btn-outline-primary whitepaper-button justify-content-center"
+                  onClick={() => {
+                    router.push('/whitepaper/whitepaper.pdf');
+                  }}
                 >
                   <Play />
                   WHITEPAPER
                 </motion.button>
+                {/* </a> */}
               </div>
             </div>
           </div>

@@ -238,6 +238,12 @@ body {
   /* border-radius: 12px; */
 }
 
+.inux-hero-con .content .btn-con a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
 .inux-hero-con .content .btn-con button:nth-of-type(2) {
   background-color: transparent;
   border-color: #ffffff;
