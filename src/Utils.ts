@@ -6,7 +6,7 @@ export const headerRoutes = [
   { name: 'Home', route: '#home' },
   { name: 'About', route: '#about' },
   { name: 'Contact Us', route: '#contact' },
-  { name: 'Whitepaper', route: '#' },
+  { name: 'Whitepaper', route: '/whitepaper/whitepaper.pdf', download: 'Inux_whitepaper' },
 ];
 
 export const countdownOptionsArray = [
