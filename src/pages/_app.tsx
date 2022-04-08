@@ -7,6 +7,7 @@ import '../../public/css/globals.css';
 import '../../public/css/responsive.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  // eslint-disable-next-line
   return <Component {...pageProps} />;
 }
 
